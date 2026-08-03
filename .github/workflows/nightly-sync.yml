@@ -1,0 +1,41 @@
+name: Nightly menu sync
+
+on:
+  schedule:
+    # 11:10pm US Eastern, every night. GitHub Actions cron is UTC.
+    # 3:10am UTC covers EST; during EDT this runs 11:10pm as well
+    # since Actions cron doesn't shift for DST — close enough for
+    # a once-a-night menu refresh. Adjust if you want it exact.
+    - cron: "10 3 * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run sync script
+        env:
+          SQUARE_ACCESS_TOKEN: ${{ secrets.SQUARE_ACCESS_TOKEN }}
+        run: python scripts/sync_menu.py
+
+      - name: Commit updated menu data
+        run: |
+          git config user.name "bella-menu-bot"
+          git config user.email "actions@github.com"
+          git add data/menu.json
+          git diff --staged --quiet && echo "No menu changes." || git commit -m "Nightly menu sync"
+          git push
