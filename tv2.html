@@ -62,11 +62,11 @@
     flex:1; display:flex; gap:0; padding:28px 40px 0; overflow:hidden; min-height:0;
   }
 
-  /* video grid, ~68% width */
-  #videoWrap{
-    flex:0 0 68%; min-width:0; display:flex; flex-direction:column; min-height:0;
+  /* ---------- MEDIA PANEL (video + promo, single rotating stage) ---------- */
+  #mediaWrap{
+    flex:0 0 64%; min-width:0; display:flex; flex-direction:column; min-height:0;
   }
-  .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+  .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:16px; flex-shrink:0; }
   .section-head .wheat-sm{ width:20px; height:20px; opacity:0.85; flex-shrink:0; }
   .section-head h2{
     font-family:'Fraunces', serif; font-weight:600; font-size:22px;
@@ -74,103 +74,95 @@
   }
   .section-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
 
-  #videoGrid{
-    flex:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr;
-    gap:16px; min-height:0;
-  }
-  .panel{
-    position:relative; border-radius:10px; overflow:hidden;
+  #mediaStage{
+    position:relative; flex:1; min-height:0;
+    border-radius:10px; overflow:hidden;
     background:var(--panel); border:1px solid var(--panel-line);
-    display:flex; align-items:center; justify-content:center;
   }
-  .panel video{
-    width:100%; height:100%; object-fit:cover; display:block;
+  .media-slide{
+    position:absolute; inset:0;
+    display:none; align-items:center; justify-content:center;
   }
-  .panel .caption{
+  .media-slide.active{ display:flex; }
+
+  /* video slides */
+  .media-slide.video-slide video{ width:100%; height:100%; object-fit:cover; display:block; }
+  .media-slide.video-slide .caption{
     position:absolute; left:0; right:0; bottom:0;
-    padding:10px 16px;
-    background:linear-gradient(0deg, rgba(0,0,0,0.65), transparent);
-    font-family:'Fraunces', serif; font-weight:500; font-size:13px;
+    padding:16px 24px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+    font-family:'Fraunces', serif; font-weight:500; font-size:16px;
     letter-spacing:0.5px; color:var(--cream); text-transform:uppercase;
   }
-
-  /* placeholder state, shown until a real video file exists at panel.src */
-  .panel.placeholder{
-    background:
-      radial-gradient(ellipse at 30% 20%, rgba(201,162,39,0.08), transparent 60%),
-      var(--panel);
-    flex-direction:column; gap:10px; text-align:center; padding:20px;
+  .media-slide.placeholder{
+    flex-direction:column; gap:12px; text-align:center; padding:20px;
+    background: radial-gradient(ellipse at 30% 20%, rgba(201,162,39,0.08), transparent 60%), var(--panel);
   }
-  .panel.placeholder .icon{
-    width:38px; height:38px; opacity:0.55;
-  }
-  .panel.placeholder .ph-title{
-    font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:var(--gold-soft);
+  .media-slide.placeholder .icon{ width:44px; height:44px; opacity:0.55; }
+  .media-slide.placeholder .ph-title{
+    font-family:'Fraunces', serif; font-weight:600; font-size:17px; color:var(--gold-soft);
     text-transform:uppercase; letter-spacing:1px;
   }
-  .panel.placeholder .ph-path{
-    font-size:11px; color:var(--dim); font-family:monospace; letter-spacing:0.3px;
+  .media-slide.placeholder .ph-path{
+    font-size:12px; color:var(--dim); font-family:monospace; letter-spacing:0.3px;
   }
 
-  /* ---------- SIDEBAR (promos) ---------- */
-  #sidebar{
-    flex:1; min-width:0; margin-left:44px; padding-left:44px;
-    border-left:1px solid var(--panel-line);
-    display:flex; flex-direction:column; min-height:0;
+  /* promo slides (share the same stage) */
+  .media-slide.promo-slide{
+    flex-direction:column; align-items:flex-start; justify-content:center;
+    text-align:left; padding:56px;
   }
-  #promoStack{
-    flex:1; position:relative; min-height:0;
-  }
-  .promo-slide{
-    position:absolute; inset:0;
-    display:none; flex-direction:column; justify-content:center;
-    text-align:left;
-  }
-  .promo-slide.active{ display:flex; }
   .promo-slide .tag{
-    font-family:'Caveat', cursive; font-size:26px; color:var(--gold-soft);
-    margin-bottom:4px;
+    font-family:'Caveat', cursive; font-size:28px; color:var(--gold-soft);
+    margin-bottom:6px;
   }
   .promo-slide h2{
-    font-family:'Fraunces', serif; font-weight:700; font-size:34px;
-    line-height:1.1; color:var(--cream);
+    font-family:'Fraunces', serif; font-weight:700; font-size:40px;
+    line-height:1.1; color:var(--cream); max-width:90%;
   }
   .promo-slide h2 em{ color:var(--gold); font-style:normal; }
   .promo-slide p.sub{
-    margin-top:14px; font-size:14.5px; color:var(--muted); line-height:1.5;
+    margin-top:16px; font-size:16px; color:var(--muted); line-height:1.5; max-width:80%;
   }
   .promo-badge{
-    margin-top:22px; display:inline-flex; align-items:center; gap:10px; align-self:flex-start;
-    background:var(--panel); border:1px solid var(--gold); border-radius:999px;
-    padding:9px 22px; font-size:12.5px; letter-spacing:1px; color:var(--gold-soft);
+    margin-top:24px; display:inline-flex; align-items:center; gap:10px;
+    background:var(--board); border:1px solid var(--gold); border-radius:999px;
+    padding:10px 24px; font-size:13px; letter-spacing:1px; color:var(--gold-soft);
     text-transform:uppercase; font-weight:600;
   }
-  #promoDots{
-    display:flex; gap:8px; padding-bottom:20px; flex-shrink:0;
-  }
-  #promoDots .pdot{
-    width:7px; height:7px; border-radius:50%; background:var(--panel-line);
-    transition:background 0.3s;
-  }
-  #promoDots .pdot.on{ background:var(--gold); }
 
-  /* ---------- SIDEBAR: COFFEE & DRINKS MINI-MENU ---------- */
-  #drinksMenu{
-    flex:0 0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0 22px;
-    padding-bottom:18px; margin-bottom:16px; border-bottom:1px solid var(--panel-line);
+  #mediaProgress{
+    flex-shrink:0; height:3px; background:var(--panel-line); margin-top:12px; border-radius:2px; overflow:hidden;
   }
-  .mini-col h3{
-    font-family:'Fraunces', serif; font-weight:600; font-size:13px;
+  #mediaProgress .bar{ height:100%; width:0%; background:var(--gold); }
+
+  #mediaDots{ display:flex; gap:8px; margin-top:10px; flex-shrink:0; }
+  #mediaDots .mdot{ width:7px; height:7px; border-radius:50%; background:var(--panel-line); transition:background 0.3s; }
+  #mediaDots .mdot.on{ background:var(--gold); }
+
+  /* ---------- SIDE MENU (Coffee & Specialty Drinks) ---------- */
+  #sideMenu{
+    flex:1; min-width:0; margin-left:44px; padding-left:44px;
+    border-left:1px solid var(--panel-line);
+    display:flex; flex-direction:column; gap:28px; min-height:0; overflow:hidden;
+  }
+  .menu-col{ flex:1; display:flex; flex-direction:column; min-height:0; }
+  .menu-col .cat-head{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-shrink:0; }
+  .menu-col .cat-head h3{
+    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
     letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
-    margin-bottom:8px;
   }
-  .mini-item{
+  .menu-col .cat-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
+  .menu-col .items{ display:flex; flex-direction:column; overflow:hidden; }
+  .menu-item{
     display:flex; align-items:baseline; justify-content:space-between;
-    gap:8px; padding:4px 0;
-    font-size:12.5px;
+    gap:14px; padding:8px 0;
+    border-bottom:1px dashed rgba(167,156,137,0.18);
+    font-size:15px;
   }
-  .mini-item .mi-name{ color:var(--cream); min-width:0; }
-  .mini-item .mi-price{ color:var(--gold); font-weight:700; white-space:nowrap; flex-shrink:0; }
+  .menu-item:last-child{ border-bottom:none; }
+  .menu-item .mi-name{ color:var(--cream); font-family:'Fraunces', serif; font-weight:500; min-width:0; }
+  .menu-item .mi-price{ color:var(--gold); font-weight:700; white-space:nowrap; flex-shrink:0; }
 
   /* ---------- SCROLLING MARQUEE ---------- */
   #marqueeWrap{
@@ -219,36 +211,26 @@
   </header>
 
   <div id="main">
-    <div id="videoWrap">
+    <div id="mediaWrap">
       <div class="section-head">
         <svg class="wheat-sm" viewBox="0 0 24 24" fill="none"><path d="M12 2V22" stroke="#C9A227" stroke-width="1.4"/><path d="M12 6L8 4M12 6L16 4M12 11L8 9M12 11L16 9M12 16L8 14M12 16L16 14" stroke="#E4C866" stroke-width="1.1" stroke-linecap="round"/></svg>
         <h2>From Our Kitchen</h2>
         <div class="section-rule"></div>
       </div>
-      <div id="videoGrid">
-        <!-- Each panel looks for a video at videos/panel-N.mp4. Until that file
-             exists, it shows a placeholder with the expected path so it's obvious
-             where to drop footage. -->
-        <div class="panel" data-panel="1"></div>
-        <div class="panel" data-panel="2"></div>
-        <div class="panel" data-panel="3"></div>
-        <div class="panel" data-panel="4"></div>
-      </div>
+      <div id="mediaStage"></div>
+      <div id="mediaProgress"><div class="bar"></div></div>
+      <div id="mediaDots"></div>
     </div>
 
-    <div id="sidebar">
-      <div id="drinksMenu">
-        <div class="mini-col">
-          <h3>Coffee</h3>
-          <div id="colCoffeeMini"></div>
-        </div>
-        <div class="mini-col">
-          <h3>Specialty Drinks</h3>
-          <div id="colDrinksMini"></div>
-        </div>
+    <div id="sideMenu">
+      <div class="menu-col">
+        <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colCoffee"></div>
       </div>
-      <div id="promoStack"></div>
-      <div id="promoDots"></div>
+      <div class="menu-col">
+        <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colDrinks"></div>
+      </div>
     </div>
   </div>
 
@@ -267,95 +249,18 @@
 </div>
 
 <script>
-// ---------- VIDEO PANELS ----------
-// Panel N looks for videos/panel-N.mp4 + a caption from CAPTIONS below.
-// Drop matching files in the videos/ folder and they'll play automatically
-// (autoplay, muted, looped) — no code changes needed. Until a file exists,
-// the panel shows a placeholder naming exactly where to put it.
-const CAPTIONS = {
+// ================= MEDIA STAGE: videos + promos, one rotating panel =================
+// Video slide N looks for videos/panel-N.mp4. Drop a matching file in the
+// videos/ folder and it plays automatically (autoplay, muted, looped) — no
+// code changes needed. Until the file exists, that slide shows a placeholder
+// naming exactly where to put it, and rotation just skips past it quickly.
+const VIDEO_CAPTIONS = {
   1: 'Fresh Croissants, Every Morning',
   2: 'Hand-Rolled Sourdough',
   3: 'Cake Decorating',
   4: 'Espresso Bar',
 };
 
-function wirePanel(panel){
-  const n = panel.dataset.panel;
-  const src = `videos/panel-${n}.mp4`;
-  const video = document.createElement('video');
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
-  video.playsInline = true;
-  video.src = src;
-
-  function showPlaceholder(){
-    panel.classList.add('placeholder');
-    panel.innerHTML = `
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.4">
-        <rect x="2" y="5" width="15" height="14" rx="2"/>
-        <path d="M17 9.5L22 6.5V17.5L17 14.5" stroke-linejoin="round"/>
-      </svg>
-      <div class="ph-title">${CAPTIONS[n] || 'Video ' + n}</div>
-      <div class="ph-path">videos/panel-${n}.mp4</div>
-    `;
-  }
-
-  video.addEventListener('error', showPlaceholder, { once: true });
-  video.addEventListener('loadeddata', () => {
-    panel.classList.remove('placeholder');
-    panel.innerHTML = '';
-    panel.appendChild(video);
-    const cap = document.createElement('div');
-    cap.className = 'caption';
-    cap.textContent = CAPTIONS[n] || '';
-    panel.appendChild(cap);
-  }, { once: true });
-
-  showPlaceholder();
-  video.load();
-}
-
-document.querySelectorAll('.panel').forEach(wirePanel);
-
-// ---------- COFFEE & SPECIALTY DRINKS MINI-MENU ----------
-// Embedded fallback snapshot, shown immediately and swapped for the live
-// nightly-synced data (same data/menu.json used by index.html) once it loads.
-const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "CAPPUCCINO", "price": 6.25}, {"name": "CEREMONIAL MATCHA LATTE", "price": 7.65}, {"name": "CHAI TEA LATTE", "price": 6.85}, {"name": "CORTADO", "price": 5.95}, {"name": "DRIP COFFEE", "price": 3.85}, {"name": "ESPRESSO", "price": 3.85}, {"name": "HOT CHOCOLATE", "price": 4.75}, {"name": "LATTE", "price": 6.5}, {"name": "MACCHIATO", "price": 4.65}, {"name": "TEA", "price": 3.75}], "SPECIALTY DRINKS": [{"name": "BLENDED NITRO COFFEE", "price": 6.95}, {"name": "LEMONADE REFRESHER", "price": 5.75}, {"name": "MIXED BERRY SMOOTHIE", "price": 9.85}, {"name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER", "price": 5.75}, {"name": "STRAWBERRY ACAI REFRESHER", "price": 5.75}, {"name": "TROPICAL SUNRISE SMOOTHIE", "price": 9.85}, {"name": "WATERMELLON REFRESHER", "price": 5.75}]};
-
-function fmtPrice(p){ return '$' + p.toFixed(2); }
-
-function renderMiniColumn(el, items, limit){
-  el.innerHTML = '';
-  items.slice(0, limit).forEach(it => {
-    const row = document.createElement('div');
-    row.className = 'mini-item';
-    row.innerHTML = `<div class="mi-name">${it.name}</div><div class="mi-price">${fmtPrice(it.price)}</div>`;
-    el.appendChild(row);
-  });
-}
-
-function renderDrinksMenu(menu){
-  renderMiniColumn(document.getElementById('colCoffeeMini'), menu['COFFEE'] || [], 9);
-  renderMiniColumn(document.getElementById('colDrinksMini'), menu['SPECIALTY DRINKS'] || [], 7);
-}
-
-renderDrinksMenu(DRINKS_MENU);
-
-async function loadLiveDrinksMenu(){
-  try {
-    const res = await fetch('data/menu.json?_=' + Date.now(), { cache: 'no-store' });
-    if (!res.ok) throw new Error('bad response');
-    const data = await res.json();
-    renderDrinksMenu(data.menu);
-  } catch (err) {
-    console.warn('Live menu fetch failed, using embedded drinks snapshot.', err);
-  }
-}
-loadLiveDrinksMenu();
-setInterval(loadLiveDrinksMenu, 60 * 60 * 1000);
-
-// ---------- PROMO SIDEBAR (rotating) ----------
 const PROMOS = [
   {
     tag: 'now through 10am',
@@ -377,38 +282,143 @@ const PROMOS = [
   },
 ];
 
-const promoStack = document.getElementById('promoStack');
-const promoDots = document.getElementById('promoDots');
+const mediaStage = document.getElementById('mediaStage');
+const mediaDots = document.getElementById('mediaDots');
+const mediaProgressBar = document.querySelector('#mediaProgress .bar');
 
-PROMOS.forEach((p, i) => {
+// Build slide list, interleaving videos and promos so it's not four videos
+// in a row then three promos in a row.
+const slidePlan = [];
+const videoNums = [1, 2, 3, 4];
+let vi = 0, pi = 0;
+while (vi < videoNums.length || pi < PROMOS.length) {
+  if (vi < videoNums.length) slidePlan.push({ type: 'video', n: videoNums[vi++] });
+  if (pi < PROMOS.length) slidePlan.push({ type: 'promo', promo: PROMOS[pi++] });
+}
+
+const slides = slidePlan.map((plan, i) => {
   const el = document.createElement('div');
-  el.className = 'promo-slide' + (i === 0 ? ' active' : '');
-  el.innerHTML = `
-    <div class="tag">${p.tag}</div>
-    <h2>${p.title}</h2>
-    <p class="sub">${p.sub}</p>
-    <div class="promo-badge">${p.badge}</div>
-  `;
-  promoStack.appendChild(el);
-
   const dot = document.createElement('div');
-  dot.className = 'pdot' + (i === 0 ? ' on' : '');
-  promoDots.appendChild(dot);
+  dot.className = 'mdot' + (i === 0 ? ' on' : '');
+  mediaDots.appendChild(dot);
+
+  if (plan.type === 'video') {
+    el.className = 'media-slide video-slide placeholder' + (i === 0 ? ' active' : '');
+    const n = plan.n;
+    const src = `videos/panel-${n}.mp4`;
+    const video = document.createElement('video');
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.src = src;
+
+    function showPlaceholder(){
+      el.classList.add('placeholder');
+      el.innerHTML = `
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.4">
+          <rect x="2" y="5" width="15" height="14" rx="2"/>
+          <path d="M17 9.5L22 6.5V17.5L17 14.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="ph-title">${VIDEO_CAPTIONS[n] || 'Video ' + n}</div>
+        <div class="ph-path">videos/panel-${n}.mp4</div>
+      `;
+    }
+    function showVideo(){
+      el.classList.remove('placeholder');
+      el.innerHTML = '';
+      el.appendChild(video);
+      const cap = document.createElement('div');
+      cap.className = 'caption';
+      cap.textContent = VIDEO_CAPTIONS[n] || '';
+      el.appendChild(cap);
+    }
+
+    video.addEventListener('error', showPlaceholder, { once: true });
+    video.addEventListener('loadeddata', showVideo, { once: true });
+    showPlaceholder();
+    video.load();
+
+    mediaStage.appendChild(el);
+    return { el, dot, video, duration: 13000, isVideo: true };
+  } else {
+    el.className = 'media-slide promo-slide' + (i === 0 ? ' active' : '');
+    const p = plan.promo;
+    el.innerHTML = `
+      <div class="tag">${p.tag}</div>
+      <h2>${p.title}</h2>
+      <p class="sub">${p.sub}</p>
+      <div class="promo-badge">${p.badge}</div>
+    `;
+    mediaStage.appendChild(el);
+    return { el, dot, video: null, duration: 8000, isVideo: false };
+  }
 });
 
-let promoIdx = 0;
-function nextPromo(){
-  const slides = promoStack.querySelectorAll('.promo-slide');
-  const dots = promoDots.querySelectorAll('.pdot');
-  slides[promoIdx].classList.remove('active');
-  dots[promoIdx].classList.remove('on');
-  promoIdx = (promoIdx + 1) % slides.length;
-  slides[promoIdx].classList.add('active');
-  dots[promoIdx].classList.add('on');
-}
-setInterval(nextPromo, 9000);
+let current = 0;
+let phaseStart = Date.now();
 
-// ---------- CLOCK ----------
+function showSlide(i){
+  slides.forEach((s, idx) => {
+    const active = idx === i;
+    s.el.classList.toggle('active', active);
+    s.dot.classList.toggle('on', active);
+    if (s.isVideo && s.video) {
+      if (active) s.video.play().catch(() => {});
+      else s.video.pause();
+    }
+  });
+  current = i;
+  phaseStart = Date.now();
+}
+showSlide(0);
+
+function animate(){
+  const elapsed = Date.now() - phaseStart;
+  const len = slides[current].duration;
+  mediaProgressBar.style.width = Math.min(100, (elapsed / len) * 100) + '%';
+  if (elapsed >= len){ showSlide((current + 1) % slides.length); }
+  requestAnimationFrame(animate);
+}
+animate();
+
+// ================= SIDE MENU: Coffee & Specialty Drinks =================
+// Embedded fallback snapshot, shown immediately and swapped for the live
+// nightly-synced data (same data/menu.json used by index.html) once it loads.
+const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "CAPPUCCINO", "price": 6.25}, {"name": "CEREMONIAL MATCHA LATTE", "price": 7.65}, {"name": "CHAI TEA LATTE", "price": 6.85}, {"name": "CORTADO", "price": 5.95}, {"name": "DRIP COFFEE", "price": 3.85}, {"name": "ESPRESSO", "price": 3.85}, {"name": "HOT CHOCOLATE", "price": 4.75}, {"name": "LATTE", "price": 6.5}, {"name": "MACCHIATO", "price": 4.65}, {"name": "TEA", "price": 3.75}], "SPECIALTY DRINKS": [{"name": "BLENDED NITRO COFFEE", "price": 6.95}, {"name": "LEMONADE REFRESHER", "price": 5.75}, {"name": "MIXED BERRY SMOOTHIE", "price": 9.85}, {"name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER", "price": 5.75}, {"name": "STRAWBERRY ACAI REFRESHER", "price": 5.75}, {"name": "TROPICAL SUNRISE SMOOTHIE", "price": 9.85}, {"name": "WATERMELLON REFRESHER", "price": 5.75}]};
+
+function fmtPrice(p){ return '$' + p.toFixed(2); }
+
+function renderMenuColumn(el, items, limit){
+  el.innerHTML = '';
+  items.slice(0, limit).forEach(it => {
+    const row = document.createElement('div');
+    row.className = 'menu-item';
+    row.innerHTML = `<div class="mi-name">${it.name}</div><div class="mi-price">${fmtPrice(it.price)}</div>`;
+    el.appendChild(row);
+  });
+}
+
+function renderDrinksMenu(menu){
+  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || [], 11);
+  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || [], 8);
+}
+
+renderDrinksMenu(DRINKS_MENU);
+
+async function loadLiveDrinksMenu(){
+  try {
+    const res = await fetch('data/menu.json?_=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('bad response');
+    const data = await res.json();
+    renderDrinksMenu(data.menu);
+  } catch (err) {
+    console.warn('Live menu fetch failed, using embedded drinks snapshot.', err);
+  }
+}
+loadLiveDrinksMenu();
+setInterval(loadLiveDrinksMenu, 60 * 60 * 1000);
+
+// ================= CLOCK =================
 function tickClock(){
   const now = new Date();
   let h = now.getHours(); const m = now.getMinutes();
