@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bella's Bake Shop — Behind the Scenes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board:#14100D;
+    --panel:#1D1710;
+    --panel-line:#33291B;
+    --gold:#C9A227;
+    --gold-soft:#E4C866;
+    --plum:#9C3F52;
+    --cream:#F3ECDF;
+    --muted:#A79C89;
+    --dim:#6E6455;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{
+    width:100%; height:100%; overflow:hidden;
+    background:var(--board);
+    font-family:'Inter',sans-serif;
+    color:var(--cream);
+  }
+  #stage{
+    position:relative;
+    width:100%; height:100vh;
+    display:flex; flex-direction:column;
+    background:
+      radial-gradient(ellipse at top left, rgba(201,162,39,0.06), transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(156,63,82,0.08), transparent 55%),
+      var(--board);
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 40px 16px;
+    border-bottom:1px solid var(--panel-line);
+    flex-shrink:0;
+  }
+  .brand{ display:flex; align-items:center; gap:14px; }
+  .wheat{ width:34px; height:34px; flex-shrink:0; }
+  .brand-text h1{
+    font-family:'Fraunces', serif; font-weight:600; font-size:26px;
+    letter-spacing:0.5px; color:var(--cream); line-height:1;
+  }
+  .brand-text span{
+    font-size:11px; letter-spacing:3px; color:var(--gold); text-transform:uppercase;
+  }
+  .clockbox{ text-align:right; }
+  #clock{
+    font-family:'Fraunces', serif; font-weight:500; font-size:26px; color:var(--gold-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  #dateline{ font-size:11px; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; }
+
+  /* ---------- MAIN LAYOUT ---------- */
+  #main{
+    flex:1; display:flex; gap:0; padding:28px 40px 0; overflow:hidden; min-height:0;
+  }
+
+  /* video grid, ~68% width */
+  #videoWrap{
+    flex:0 0 68%; min-width:0; display:flex; flex-direction:column; min-height:0;
+  }
+  .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+  .section-head .wheat-sm{ width:20px; height:20px; opacity:0.85; flex-shrink:0; }
+  .section-head h2{
+    font-family:'Fraunces', serif; font-weight:600; font-size:22px;
+    letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
+  }
+  .section-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
+
+  #videoGrid{
+    flex:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr;
+    gap:16px; min-height:0;
+  }
+  .panel{
+    position:relative; border-radius:10px; overflow:hidden;
+    background:var(--panel); border:1px solid var(--panel-line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .panel video{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .panel .caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:10px 16px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.65), transparent);
+    font-family:'Fraunces', serif; font-weight:500; font-size:13px;
+    letter-spacing:0.5px; color:var(--cream); text-transform:uppercase;
+  }
+
+  /* placeholder state, shown until a real video file exists at panel.src */
+  .panel.placeholder{
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(201,162,39,0.08), transparent 60%),
+      var(--panel);
+    flex-direction:column; gap:10px; text-align:center; padding:20px;
+  }
+  .panel.placeholder .icon{
+    width:38px; height:38px; opacity:0.55;
+  }
+  .panel.placeholder .ph-title{
+    font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:var(--gold-soft);
+    text-transform:uppercase; letter-spacing:1px;
+  }
+  .panel.placeholder .ph-path{
+    font-size:11px; color:var(--dim); font-family:monospace; letter-spacing:0.3px;
+  }
+
+  /* ---------- SIDEBAR (promos) ---------- */
+  #sidebar{
+    flex:1; min-width:0; margin-left:44px; padding-left:44px;
+    border-left:1px solid var(--panel-line);
+    display:flex; flex-direction:column; min-height:0;
+  }
+  #promoStack{
+    flex:1; position:relative; min-height:0;
+  }
+  .promo-slide{
+    position:absolute; inset:0;
+    display:none; flex-direction:column; justify-content:center;
+    text-align:left;
+  }
+  .promo-slide.active{ display:flex; }
+  .promo-slide .tag{
+    font-family:'Caveat', cursive; font-size:26px; color:var(--gold-soft);
+    margin-bottom:4px;
+  }
+  .promo-slide h2{
+    font-family:'Fraunces', serif; font-weight:700; font-size:34px;
+    line-height:1.1; color:var(--cream);
+  }
+  .promo-slide h2 em{ color:var(--gold); font-style:normal; }
+  .promo-slide p.sub{
+    margin-top:14px; font-size:14.5px; color:var(--muted); line-height:1.5;
+  }
+  .promo-badge{
+    margin-top:22px; display:inline-flex; align-items:center; gap:10px; align-self:flex-start;
+    background:var(--panel); border:1px solid var(--gold); border-radius:999px;
+    padding:9px 22px; font-size:12.5px; letter-spacing:1px; color:var(--gold-soft);
+    text-transform:uppercase; font-weight:600;
+  }
+  #promoDots{
+    display:flex; gap:8px; padding-bottom:20px; flex-shrink:0;
+  }
+  #promoDots .pdot{
+    width:7px; height:7px; border-radius:50%; background:var(--panel-line);
+    transition:background 0.3s;
+  }
+  #promoDots .pdot.on{ background:var(--gold); }
+
+  /* ---------- SCROLLING MARQUEE ---------- */
+  #marqueeWrap{
+    flex-shrink:0; overflow:hidden; white-space:nowrap;
+    background:var(--panel); border-top:1px solid var(--panel-line); border-bottom:1px solid var(--panel-line);
+    padding:9px 0;
+  }
+  #marqueeTrack{
+    display:inline-block; white-space:nowrap;
+    animation: scrollLeft 22s linear infinite;
+    font-family:'Fraunces', serif; font-weight:500; font-size:14px;
+    letter-spacing:2px; color:var(--gold-soft); text-transform:uppercase;
+  }
+  #marqueeTrack span{ margin:0 22px; color:var(--muted); }
+  @keyframes scrollLeft{
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-50%); }
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    flex-shrink:0; display:flex; align-items:center; justify-content:space-between;
+    padding:10px 40px;
+    font-size:11px; color:var(--dim); letter-spacing:0.5px;
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <header>
+    <div class="brand">
+      <svg class="wheat" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2V22" stroke="#C9A227" stroke-width="1.4"/>
+        <path d="M12 5L8 3M12 5L16 3M12 8L8 6M12 8L16 6M12 11L8 9M12 11L16 9M12 14L8 12M12 14L16 12M12 17L8 15M12 17L16 15" stroke="#E4C866" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-text">
+        <h1>Bella's Bake Shop</h1>
+        <span>Mount Kisco, NY</span>
+      </div>
+    </div>
+    <div class="clockbox">
+      <div id="clock">--:--</div>
+      <div id="dateline">-</div>
+    </div>
+  </header>
+
+  <div id="main">
+    <div id="videoWrap">
+      <div class="section-head">
+        <svg class="wheat-sm" viewBox="0 0 24 24" fill="none"><path d="M12 2V22" stroke="#C9A227" stroke-width="1.4"/><path d="M12 6L8 4M12 6L16 4M12 11L8 9M12 11L16 9M12 16L8 14M12 16L16 14" stroke="#E4C866" stroke-width="1.1" stroke-linecap="round"/></svg>
+        <h2>From Our Kitchen</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div id="videoGrid">
+        <!-- Each panel looks for a video at videos/panel-N.mp4. Until that file
+             exists, it shows a placeholder with the expected path so it's obvious
+             where to drop footage. -->
+        <div class="panel" data-panel="1"></div>
+        <div class="panel" data-panel="2"></div>
+        <div class="panel" data-panel="3"></div>
+        <div class="panel" data-panel="4"></div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div id="promoStack"></div>
+      <div id="promoDots"></div>
+    </div>
+  </div>
+
+  <div id="marqueeWrap">
+    <div id="marqueeTrack">
+      <span>WE MAKE EVERYTHING IN HOUSE</span><span>CROISSANTS</span><span>COOKIES</span><span>FRENCH MACARONS</span><span>SOURDOUGH</span><span>CAKES</span>
+      <span>WE MAKE EVERYTHING IN HOUSE</span><span>CROISSANTS</span><span>COOKIES</span><span>FRENCH MACARONS</span><span>SOURDOUGH</span><span>CAKES</span>
+    </div>
+  </div>
+
+  <footer>
+    <div>Ask about Bella's Rewards</div>
+    <div>If you have a food allergy, please speak with the owner, chef, or server</div>
+  </footer>
+
+</div>
+
+<script>
+// ---------- VIDEO PANELS ----------
+// Panel N looks for videos/panel-N.mp4 + a caption from CAPTIONS below.
+// Drop matching files in the videos/ folder and they'll play automatically
+// (autoplay, muted, looped) — no code changes needed. Until a file exists,
+// the panel shows a placeholder naming exactly where to put it.
+const CAPTIONS = {
+  1: 'Fresh Croissants, Every Morning',
+  2: 'Hand-Rolled Sourdough',
+  3: 'Cake Decorating',
+  4: 'Espresso Bar',
+};
+
+function wirePanel(panel){
+  const n = panel.dataset.panel;
+  const src = `videos/panel-${n}.mp4`;
+  const video = document.createElement('video');
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.src = src;
+
+  function showPlaceholder(){
+    panel.classList.add('placeholder');
+    panel.innerHTML = `
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.4">
+        <rect x="2" y="5" width="15" height="14" rx="2"/>
+        <path d="M17 9.5L22 6.5V17.5L17 14.5" stroke-linejoin="round"/>
+      </svg>
+      <div class="ph-title">${CAPTIONS[n] || 'Video ' + n}</div>
+      <div class="ph-path">videos/panel-${n}.mp4</div>
+    `;
+  }
+
+  video.addEventListener('error', showPlaceholder, { once: true });
+  video.addEventListener('loadeddata', () => {
+    panel.classList.remove('placeholder');
+    panel.innerHTML = '';
+    panel.appendChild(video);
+    const cap = document.createElement('div');
+    cap.className = 'caption';
+    cap.textContent = CAPTIONS[n] || '';
+    panel.appendChild(cap);
+  }, { once: true });
+
+  showPlaceholder();
+  video.load();
+}
+
+document.querySelectorAll('.panel').forEach(wirePanel);
+
+// ---------- PROMO SIDEBAR (rotating) ----------
+const PROMOS = [
+  {
+    tag: 'now through 10am',
+    title: 'Double points on <em>every</em> Slow Hours order',
+    sub: 'Earn 2x loyalty points on anything ordered between 8&nbsp;&ndash;&nbsp;10am. 10 points gets you a free coffee, any size.',
+    badge: "Ask about Bella's Rewards",
+  },
+  {
+    tag: 'baked fresh daily',
+    title: 'Everything is made <em>in house</em>',
+    sub: 'Our croissants, cookies, macarons, and sourdough are all hand-made right here in Mount Kisco.',
+    badge: 'Come see the kitchen',
+  },
+  {
+    tag: 'weekends',
+    title: 'Custom cakes for <em>any</em> occasion',
+    sub: "Ask a team member about ordering a custom cake for your next birthday, shower, or celebration.",
+    badge: 'Ask in store',
+  },
+];
+
+const promoStack = document.getElementById('promoStack');
+const promoDots = document.getElementById('promoDots');
+
+PROMOS.forEach((p, i) => {
+  const el = document.createElement('div');
+  el.className = 'promo-slide' + (i === 0 ? ' active' : '');
+  el.innerHTML = `
+    <div class="tag">${p.tag}</div>
+    <h2>${p.title}</h2>
+    <p class="sub">${p.sub}</p>
+    <div class="promo-badge">${p.badge}</div>
+  `;
+  promoStack.appendChild(el);
+
+  const dot = document.createElement('div');
+  dot.className = 'pdot' + (i === 0 ? ' on' : '');
+  promoDots.appendChild(dot);
+});
+
+let promoIdx = 0;
+function nextPromo(){
+  const slides = promoStack.querySelectorAll('.promo-slide');
+  const dots = promoDots.querySelectorAll('.pdot');
+  slides[promoIdx].classList.remove('active');
+  dots[promoIdx].classList.remove('on');
+  promoIdx = (promoIdx + 1) % slides.length;
+  slides[promoIdx].classList.add('active');
+  dots[promoIdx].classList.add('on');
+}
+setInterval(nextPromo, 9000);
+
+// ---------- CLOCK ----------
+function tickClock(){
+  const now = new Date();
+  let h = now.getHours(); const m = now.getMinutes();
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12; if(h === 0) h = 12;
+  document.getElementById('clock').textContent = `${h}:${m.toString().padStart(2,'0')} ${ampm}`;
+  document.getElementById('dateline').textContent = now.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
+}
+tickClock();
+setInterval(tickClock, 1000 * 15);
+</script>
+</body>
+</html>
