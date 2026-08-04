@@ -154,6 +154,24 @@
   }
   #promoDots .pdot.on{ background:var(--gold); }
 
+  /* ---------- SIDEBAR: COFFEE & DRINKS MINI-MENU ---------- */
+  #drinksMenu{
+    flex:0 0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0 22px;
+    padding-bottom:18px; margin-bottom:16px; border-bottom:1px solid var(--panel-line);
+  }
+  .mini-col h3{
+    font-family:'Fraunces', serif; font-weight:600; font-size:13px;
+    letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .mini-item{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:8px; padding:4px 0;
+    font-size:12.5px;
+  }
+  .mini-item .mi-name{ color:var(--cream); min-width:0; }
+  .mini-item .mi-price{ color:var(--gold); font-weight:700; white-space:nowrap; flex-shrink:0; }
+
   /* ---------- SCROLLING MARQUEE ---------- */
   #marqueeWrap{
     flex-shrink:0; overflow:hidden; white-space:nowrap;
@@ -219,6 +237,16 @@
     </div>
 
     <div id="sidebar">
+      <div id="drinksMenu">
+        <div class="mini-col">
+          <h3>Coffee</h3>
+          <div id="colCoffeeMini"></div>
+        </div>
+        <div class="mini-col">
+          <h3>Specialty Drinks</h3>
+          <div id="colDrinksMini"></div>
+        </div>
+      </div>
       <div id="promoStack"></div>
       <div id="promoDots"></div>
     </div>
@@ -289,6 +317,43 @@ function wirePanel(panel){
 }
 
 document.querySelectorAll('.panel').forEach(wirePanel);
+
+// ---------- COFFEE & SPECIALTY DRINKS MINI-MENU ----------
+// Embedded fallback snapshot, shown immediately and swapped for the live
+// nightly-synced data (same data/menu.json used by index.html) once it loads.
+const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "CAPPUCCINO", "price": 6.25}, {"name": "CEREMONIAL MATCHA LATTE", "price": 7.65}, {"name": "CHAI TEA LATTE", "price": 6.85}, {"name": "CORTADO", "price": 5.95}, {"name": "DRIP COFFEE", "price": 3.85}, {"name": "ESPRESSO", "price": 3.85}, {"name": "HOT CHOCOLATE", "price": 4.75}, {"name": "LATTE", "price": 6.5}, {"name": "MACCHIATO", "price": 4.65}, {"name": "TEA", "price": 3.75}], "SPECIALTY DRINKS": [{"name": "BLENDED NITRO COFFEE", "price": 6.95}, {"name": "LEMONADE REFRESHER", "price": 5.75}, {"name": "MIXED BERRY SMOOTHIE", "price": 9.85}, {"name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER", "price": 5.75}, {"name": "STRAWBERRY ACAI REFRESHER", "price": 5.75}, {"name": "TROPICAL SUNRISE SMOOTHIE", "price": 9.85}, {"name": "WATERMELLON REFRESHER", "price": 5.75}]};
+
+function fmtPrice(p){ return '$' + p.toFixed(2); }
+
+function renderMiniColumn(el, items, limit){
+  el.innerHTML = '';
+  items.slice(0, limit).forEach(it => {
+    const row = document.createElement('div');
+    row.className = 'mini-item';
+    row.innerHTML = `<div class="mi-name">${it.name}</div><div class="mi-price">${fmtPrice(it.price)}</div>`;
+    el.appendChild(row);
+  });
+}
+
+function renderDrinksMenu(menu){
+  renderMiniColumn(document.getElementById('colCoffeeMini'), menu['COFFEE'] || [], 9);
+  renderMiniColumn(document.getElementById('colDrinksMini'), menu['SPECIALTY DRINKS'] || [], 7);
+}
+
+renderDrinksMenu(DRINKS_MENU);
+
+async function loadLiveDrinksMenu(){
+  try {
+    const res = await fetch('data/menu.json?_=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('bad response');
+    const data = await res.json();
+    renderDrinksMenu(data.menu);
+  } catch (err) {
+    console.warn('Live menu fetch failed, using embedded drinks snapshot.', err);
+  }
+}
+loadLiveDrinksMenu();
+setInterval(loadLiveDrinksMenu, 60 * 60 * 1000);
 
 // ---------- PROMO SIDEBAR (rotating) ----------
 const PROMOS = [
