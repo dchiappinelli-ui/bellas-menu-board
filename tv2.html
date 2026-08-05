@@ -476,12 +476,36 @@ function renderDrinksMenu(menu){
 
 renderDrinksMenu(DRINKS_MENU);
 
+// Items unchecked in admin.html land here — { "CATEGORY NAME": ["Item Name", ...] }.
+// Missing/unreachable file just means nothing is hidden.
+async function loadHiddenItems(){
+  try {
+    const res = await fetch('data/hidden-items.json?_=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) return {};
+    return await res.json();
+  } catch (e) {
+    return {};
+  }
+}
+
+function filterMenu(menu, hidden){
+  const out = {};
+  Object.keys(menu).forEach(cat => {
+    const hiddenNames = new Set(hidden[cat] || []);
+    out[cat] = (menu[cat] || []).filter(it => !hiddenNames.has(it.name));
+  });
+  return out;
+}
+
 async function loadLiveDrinksMenu(){
   try {
-    const res = await fetch('data/menu.json?_=' + Date.now(), { cache: 'no-store' });
-    if (!res.ok) throw new Error('bad response');
-    const data = await res.json();
-    renderDrinksMenu(data.menu);
+    const [menuRes, hidden] = await Promise.all([
+      fetch('data/menu.json?_=' + Date.now(), { cache: 'no-store' }),
+      loadHiddenItems(),
+    ]);
+    if (!menuRes.ok) throw new Error('bad response');
+    const data = await menuRes.json();
+    renderDrinksMenu(filterMenu(data.menu, hidden));
   } catch (err) {
     console.warn('Live menu fetch failed, using embedded drinks snapshot.', err);
   }

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bella's Bake Shop — Manage Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board:#14100D; --panel:#1D1710; --panel-line:#33291B;
+    --gold:#C9A227; --gold-soft:#E4C866; --cream:#F3ECDF; --muted:#A79C89; --dim:#6E6455;
+    --ok:#5FA86B; --err:#C0554A;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--board); color:var(--cream);
+    font-family:'Inter',sans-serif; padding:32px 40px 80px; max-width:900px; margin:0 auto;
+  }
+  h1{ font-family:'Fraunces',serif; font-weight:700; font-size:28px; margin:0 0 4px; }
+  .sub{ color:var(--muted); font-size:14px; margin-bottom:28px; }
+  .token-box{
+    background:var(--panel); border:1px solid var(--panel-line); border-radius:10px;
+    padding:18px 20px; margin-bottom:28px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+  }
+  .token-box input[type=password]{
+    flex:1; min-width:240px; background:var(--board); border:1px solid var(--panel-line);
+    color:var(--cream); padding:10px 12px; border-radius:6px; font-size:14px;
+  }
+  .token-box label{ font-size:13px; color:var(--muted); }
+  button{
+    background:var(--gold); color:#1a1408; border:none; border-radius:6px;
+    padding:10px 20px; font-size:14px; font-weight:600; cursor:pointer;
+  }
+  button:disabled{ opacity:0.4; cursor:not-allowed; }
+  button.secondary{ background:transparent; border:1px solid var(--panel-line); color:var(--muted); }
+  .category{ margin-bottom:30px; }
+  .category h2{
+    font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--gold-soft);
+    text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid var(--panel-line);
+    padding-bottom:8px; margin-bottom:10px;
+  }
+  .item-row{
+    display:flex; align-items:center; gap:12px; padding:8px 4px;
+    border-bottom:1px dashed rgba(167,156,137,0.15);
+  }
+  .item-row input[type=checkbox]{ width:18px; height:18px; accent-color:var(--gold); flex-shrink:0; }
+  .item-row .name{ flex:1; font-size:14.5px; }
+  .item-row .price{ color:var(--gold); font-weight:600; font-size:14px; }
+  .item-row.hidden .name{ color:var(--dim); text-decoration:line-through; }
+  #saveBar{
+    position:fixed; bottom:0; left:0; right:0; background:var(--panel);
+    border-top:1px solid var(--panel-line); padding:16px 40px;
+    display:flex; align-items:center; gap:16px; justify-content:center;
+  }
+  #status{ font-size:13.5px; }
+  #status.ok{ color:var(--ok); }
+  #status.err{ color:var(--err); }
+  #status.busy{ color:var(--muted); }
+  .empty{ color:var(--dim); font-size:14px; padding:12px 4px; }
+</style>
+</head>
+<body>
+
+<h1>Manage Menu</h1>
+<div class="sub">Uncheck anything not available today — the boards will hide it. Changes apply within an hour (or reload the TV for instantly).</div>
+
+<div class="token-box">
+  <label for="tokenInput">GitHub access token:</label>
+  <input type="password" id="tokenInput" placeholder="ghp_...">
+  <button id="saveTokenBtn">Remember</button>
+  <button id="forgetTokenBtn" class="secondary">Forget</button>
+  <span id="tokenStatus" style="font-size:13px; color:var(--muted);"></span>
+</div>
+
+<div id="categories">Loading menu…</div>
+
+<div id="saveBar">
+  <button id="saveBtn" disabled>Save Changes</button>
+  <span id="status"></span>
+</div>
+
+<script>
+const OWNER = 'dchiappinelli-ui';
+const REPO = 'bellas-menu-board';
+const HIDDEN_PATH = 'data/hidden-items.json';
+const MENU_PATH = 'data/menu.json';
+
+const tokenInput = document.getElementById('tokenInput');
+const tokenStatus = document.getElementById('tokenStatus');
+const saveBtn = document.getElementById('saveBtn');
+const statusEl = document.getElementById('status');
+const categoriesEl = document.getElementById('categories');
+
+function getToken(){ return localStorage.getItem('gh_pat') || ''; }
+function setToken(t){ localStorage.setItem('gh_pat', t); }
+function clearToken(){ localStorage.removeItem('gh_pat'); }
+
+function refreshTokenUI(){
+  const t = getToken();
+  tokenInput.value = t;
+  tokenStatus.textContent = t ? 'Token saved in this browser.' : 'No token saved — enter one to enable saving.';
+  saveBtn.disabled = !t;
+}
+
+document.getElementById('saveTokenBtn').addEventListener('click', () => {
+  setToken(tokenInput.value.trim());
+  refreshTokenUI();
+});
+document.getElementById('forgetTokenBtn').addEventListener('click', () => {
+  clearToken();
+  tokenInput.value = '';
+  refreshTokenUI();
+});
+refreshTokenUI();
+
+let menu = null;
+let hidden = {}; // { "CATEGORY NAME": ["Item Name", ...] }
+let hiddenSha = null; // needed to update the existing file via the GitHub API
+
+async function ghGet(path){
+  const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`, {
+    headers: { 'Accept': 'application/vnd.github+json' },
+    cache: 'no-store',
+  });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error('GitHub API error ' + res.status);
+  const data = await res.json();
+  const content = decodeURIComponent(escape(atob(data.content)));
+  return { json: JSON.parse(content), sha: data.sha };
+}
+
+async function loadAll(){
+  const menuRes = await fetch(MENU_PATH + '?_=' + Date.now(), { cache: 'no-store' });
+  menu = (await menuRes.json()).menu;
+
+  try {
+    const h = await ghGet(HIDDEN_PATH);
+    if (h) { hidden = h.json; hiddenSha = h.sha; }
+  } catch (e) {
+    console.warn('Could not load hidden-items.json (may not exist yet):', e);
+  }
+
+  render();
+}
+
+function isHidden(cat, name){
+  return (hidden[cat] || []).includes(name);
+}
+
+function toggleHidden(cat, name, hideIt){
+  if (!hidden[cat]) hidden[cat] = [];
+  const idx = hidden[cat].indexOf(name);
+  if (hideIt && idx === -1) hidden[cat].push(name);
+  if (!hideIt && idx !== -1) hidden[cat].splice(idx, 1);
+}
+
+function render(){
+  categoriesEl.innerHTML = '';
+  Object.keys(menu).forEach(cat => {
+    const items = menu[cat];
+    const section = document.createElement('div');
+    section.className = 'category';
+    const h2 = document.createElement('h2');
+    h2.textContent = cat;
+    section.appendChild(h2);
+
+    if (!items.length) {
+      const empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = 'No items in this category.';
+      section.appendChild(empty);
+    }
+
+    items.forEach(it => {
+      const row = document.createElement('div');
+      const hiddenNow = isHidden(cat, it.name);
+      row.className = 'item-row' + (hiddenNow ? ' hidden' : '');
+      row.innerHTML = `
+        <input type="checkbox" ${hiddenNow ? '' : 'checked'}>
+        <div class="name">${it.name}</div>
+        <div class="price">$${Number(it.price).toFixed(2)}</div>
+      `;
+      const cb = row.querySelector('input');
+      cb.addEventListener('change', () => {
+        toggleHidden(cat, it.name, !cb.checked);
+        row.classList.toggle('hidden', !cb.checked);
+      });
+      section.appendChild(row);
+    });
+
+    categoriesEl.appendChild(section);
+  });
+}
+
+saveBtn.addEventListener('click', async () => {
+  const token = getToken();
+  if (!token) return;
+  statusEl.textContent = 'Saving…';
+  statusEl.className = 'busy';
+  saveBtn.disabled = true;
+
+  try {
+    // Clean up empty category arrays before saving
+    const cleanHidden = {};
+    Object.keys(hidden).forEach(cat => {
+      if (hidden[cat] && hidden[cat].length) cleanHidden[cat] = hidden[cat];
+    });
+
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(cleanHidden, null, 2))));
+    const body = {
+      message: 'Update hidden menu items via admin page',
+      content,
+      branch: 'main',
+    };
+    if (hiddenSha) body.sha = hiddenSha;
+
+    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${HIDDEN_PATH}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`GitHub API ${res.status}: ${errText}`);
+    }
+    const data = await res.json();
+    hiddenSha = data.content.sha;
+    statusEl.textContent = 'Saved — boards will update within the hour (or reload the TV now).';
+    statusEl.className = 'ok';
+  } catch (e) {
+    console.error(e);
+    statusEl.textContent = 'Save failed: ' + e.message;
+    statusEl.className = 'err';
+  } finally {
+    saveBtn.disabled = !getToken();
+  }
+});
+
+loadAll();
+</script>
+</body>
+</html>
