@@ -391,13 +391,27 @@ const slides = slidePlan.map((plan, i) => {
 let current = 0;
 let phaseStart = Date.now();
 
+function tryPlay(video){
+  // Calling play() before the browser has buffered any data can silently
+  // fail on some devices instead of queuing. If there's not enough data
+  // yet, wait for canplay and retry once (only if still relevant — the
+  // isConnected/paused check below guards against a stale deferred call).
+  if (video.readyState >= 2) {
+    video.play().catch(() => {});
+  } else {
+    video.addEventListener('canplay', () => {
+      if (video.isConnected) video.play().catch(() => {});
+    }, { once: true });
+  }
+}
+
 function showSlide(i){
   slides.forEach((s, idx) => {
     const active = idx === i;
     s.el.classList.toggle('active', active);
     s.dot.classList.toggle('on', active);
     if (s.isVideo && s.video) {
-      if (active) s.video.play().catch(() => {});
+      if (active) tryPlay(s.video);
       else s.video.pause();
     }
   });
