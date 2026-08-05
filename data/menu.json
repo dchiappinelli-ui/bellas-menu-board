@@ -1,6 +1,43 @@
 {
-  "synced_at": "2026-08-04T22:33:56.248787+00:00",
+  "synced_at": "2026-08-05T11:33:18.347543+00:00",
   "menu": {
+    "SPECIALTY DRINKS": [
+      {
+        "name": "BLENDED NITRO COFFEE",
+        "price": 6.95,
+        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
+      },
+      {
+        "name": "LEMONADE REFRESHER",
+        "price": 5.75,
+        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      },
+      {
+        "name": "MIXED BERRY SMOOTHIE",
+        "price": 9.85,
+        "description": "Berry smoothie"
+      },
+      {
+        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
+      },
+      {
+        "name": "STRAWBERRY ACAI REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
+      },
+      {
+        "name": "TROPICAL SUNRISE SMOOTHIE",
+        "price": 9.85,
+        "description": ""
+      },
+      {
+        "name": "WATERMELLON REFRESHER",
+        "price": 5.75,
+        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      }
+    ],
     "GOURMET PASTRY": [
       {
         "name": "8-10AM COMBO SPECIAL",
@@ -148,41 +185,81 @@
         "description": ""
       }
     ],
-    "SPECIALTY DRINKS": [
+    "ARTISAN SANDWICHES": [
       {
-        "name": "BLENDED NITRO COFFEE",
-        "price": 6.95,
-        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
+        "name": "AVOCADO TOAST",
+        "price": 12.95,
+        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
       },
       {
-        "name": "LEMONADE REFRESHER",
-        "price": 5.75,
-        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+        "name": "BELLA'S RICOTTA BRUSCHETTA",
+        "price": 14.0,
+        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED TOMATO"
       },
       {
-        "name": "MIXED BERRY SMOOTHIE",
-        "price": 9.85,
-        "description": "Berry smoothie"
+        "name": "BELLAS CHICKEN BTB PANINI",
+        "price": 16.95,
+        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL, PESTO, BALSAMIC MAYO ON FOCACCIA"
       },
       {
-        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
+        "name": "BRUNCH BLISS",
+        "price": 16.95,
+        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
       },
       {
-        "name": "STRAWBERRY ACAI REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
-      },
-      {
-        "name": "TROPICAL SUNRISE SMOOTHIE",
-        "price": 9.85,
+        "name": "CANNOLI CROISSANT",
+        "price": 10.95,
         "description": ""
       },
       {
-        "name": "WATERMELLON REFRESHER",
-        "price": 5.75,
-        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+        "name": "CAPRESE CROISSANT",
+        "price": 13.25,
+        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
+      },
+      {
+        "name": "CROBEC",
+        "price": 12.95,
+        "description": "Croissant Bacon Egg & Cheese"
+      },
+      {
+        "name": "HAM & CHEESE DELUX",
+        "price": 14.95,
+        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
+      },
+      {
+        "name": "HAM AND SWISS SOURDOUGH (GRAB AND GO)",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "HAM AND SWISS SOURDOUGH SANDWICH",
+        "price": 12.99,
+        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      },
+      {
+        "name": "MEDITERRANEAN BLISS",
+        "price": 19.65,
+        "description": "BURRATA, PROSCIUTTO ON TOASTED SOURDOUGH, ARUGULA, PESTO, BALSAMIC GLAZE"
+      },
+      {
+        "name": "THE CRAN-WALNUT CHICKEN SOURDOUGH",
+        "price": 13.45,
+        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON  OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD."
+      },
+      {
+        "name": "TURKEY AND SWISS SOURDOUGH (GRAB AND GO)",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "TURKEY AND SWISS SOURDOUGH SANDWICH",
+        "price": 12.95,
+        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      },
+      {
+        "name": "TURKEY CLUB",
+        "price": 16.0,
+        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
       }
     ],
     "COFFEE": [
@@ -352,83 +429,6 @@
         "name": "SOURDOUGH PRETZEL",
         "price": 6.75,
         "description": ""
-      }
-    ],
-    "ARTISAN SANDWICHES": [
-      {
-        "name": "AVOCADO TOAST",
-        "price": 12.95,
-        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
-      },
-      {
-        "name": "BELLA'S RICOTTA BRUSCHETTA",
-        "price": 14.0,
-        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED TOMATO"
-      },
-      {
-        "name": "BELLAS CHICKEN BTB PANINI",
-        "price": 16.95,
-        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL, PESTO, BALSAMIC MAYO ON FOCACCIA"
-      },
-      {
-        "name": "BRUNCH BLISS",
-        "price": 16.95,
-        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
-      },
-      {
-        "name": "CANNOLI CROISSANT",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "CAPRESE CROISSANT",
-        "price": 13.25,
-        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
-      },
-      {
-        "name": "CROBEC",
-        "price": 12.95,
-        "description": "Croissant Bacon Egg & Cheese"
-      },
-      {
-        "name": "HAM & CHEESE DELUX",
-        "price": 14.95,
-        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.99,
-        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "MEDITERRANEAN BLISS",
-        "price": 19.65,
-        "description": "BURRATA, PROSCIUTTO ON TOASTED SOURDOUGH, ARUGULA, PESTO, BALSAMIC GLAZE"
-      },
-      {
-        "name": "THE CRAN-WALNUT CHICKEN SOURDOUGH",
-        "price": 13.45,
-        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON  OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD."
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.95,
-        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "TURKEY CLUB",
-        "price": 16.0,
-        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
       }
     ]
   }
