@@ -320,9 +320,19 @@ const slides = slidePlan.map((plan, i) => {
     const n = plan.n;
     const src = `videos/panel-${n}.mp4`;
     const video = document.createElement('video');
+    // Set both the JS properties and the raw HTML attributes — some smart-TV
+    // / embedded browsers only honor autoplay/muted when present as attributes,
+    // not when set via JS after element creation.
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
+    video.autoplay = true;
+    video.preload = 'auto';
+    video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('autoplay', '');
     video.src = src;
 
     function showPlaceholder(){
@@ -348,6 +358,7 @@ const slides = slidePlan.map((plan, i) => {
 
     video.addEventListener('error', showPlaceholder, { once: true });
     video.addEventListener('loadeddata', showVideo, { once: true });
+    video.addEventListener('canplay', showVideo, { once: true });
     showPlaceholder();
     video.load();
 
