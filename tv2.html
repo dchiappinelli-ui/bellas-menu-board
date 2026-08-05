@@ -95,16 +95,19 @@
     font-family:'Fraunces', serif; font-weight:500; font-size:16px;
     letter-spacing:0.5px; color:var(--cream); text-transform:uppercase;
   }
-  .media-slide.placeholder{
-    flex-direction:column; gap:12px; text-align:center; padding:20px;
+  .placeholder-overlay{
+    position:absolute; inset:0; display:none;
+    flex-direction:column; align-items:center; justify-content:center;
+    gap:12px; text-align:center; padding:20px;
     background: radial-gradient(ellipse at 30% 20%, rgba(201,162,39,0.08), transparent 60%), var(--panel);
   }
-  .media-slide.placeholder .icon{ width:44px; height:44px; opacity:0.55; }
-  .media-slide.placeholder .ph-title{
+  .media-slide.video-slide.placeholder .placeholder-overlay{ display:flex; }
+  .placeholder-overlay .icon{ width:44px; height:44px; opacity:0.55; }
+  .placeholder-overlay .ph-title{
     font-family:'Fraunces', serif; font-weight:600; font-size:17px; color:var(--gold-soft);
     text-transform:uppercase; letter-spacing:1px;
   }
-  .media-slide.placeholder .ph-path{
+  .placeholder-overlay .ph-path{
     font-size:12px; color:var(--dim); font-family:monospace; letter-spacing:0.3px;
   }
 
@@ -336,32 +339,37 @@ const slides = slidePlan.map((plan, i) => {
     video.setAttribute('autoplay', '');
     video.src = src;
 
-    function showPlaceholder(){
-      el.classList.add('placeholder');
-      el.innerHTML = `
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.4">
-          <rect x="2" y="5" width="15" height="14" rx="2"/>
-          <path d="M17 9.5L22 6.5V17.5L17 14.5" stroke-linejoin="round"/>
-        </svg>
-        <div class="ph-title">${VIDEO_CAPTIONS[n] || 'Video ' + n}</div>
-        <div class="ph-path">videos/panel-${n}.mp4</div>
-      `;
-    }
-    function showVideo(){
+    // The video and its caption are attached to the page immediately (not
+    // deferred until it finishes loading) — some smart-TV browsers only
+    // engage their hardware video decoder for elements already in the DOM,
+    // and silently no-op play() calls on detached elements. The placeholder
+    // is a separate overlay on top, toggled by a class rather than by
+    // swapping innerHTML, so the underlying <video> is never removed/re-added.
+    const overlay = document.createElement('div');
+    overlay.className = 'placeholder-overlay';
+    overlay.innerHTML = `
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.4">
+        <rect x="2" y="5" width="15" height="14" rx="2"/>
+        <path d="M17 9.5L22 6.5V17.5L17 14.5" stroke-linejoin="round"/>
+      </svg>
+      <div class="ph-title">${VIDEO_CAPTIONS[n] || 'Video ' + n}</div>
+      <div class="ph-path">videos/panel-${n}.mp4</div>
+    `;
+    const cap = document.createElement('div');
+    cap.className = 'caption';
+    cap.textContent = VIDEO_CAPTIONS[n] || '';
+
+    el.appendChild(video);
+    el.appendChild(cap);
+    el.appendChild(overlay);
+
+    video.addEventListener('error', () => el.classList.add('placeholder'), { once: true });
+    function markReady(){
       el.classList.remove('placeholder');
       el.classList.toggle('portrait', video.videoHeight > video.videoWidth);
-      el.innerHTML = '';
-      el.appendChild(video);
-      const cap = document.createElement('div');
-      cap.className = 'caption';
-      cap.textContent = VIDEO_CAPTIONS[n] || '';
-      el.appendChild(cap);
     }
-
-    video.addEventListener('error', showPlaceholder, { once: true });
-    video.addEventListener('loadeddata', showVideo, { once: true });
-    video.addEventListener('canplay', showVideo, { once: true });
-    showPlaceholder();
+    video.addEventListener('loadeddata', markReady, { once: true });
+    video.addEventListener('canplay', markReady, { once: true });
     video.load();
 
     mediaStage.appendChild(el);
