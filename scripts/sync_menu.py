@@ -105,14 +105,18 @@ def build_menu(objects_by_id, category_name_by_id):
         if not name:
             continue
 
-        prices = []
+        # Use the first variation's price (Square's default/primary variation),
+        # not the cheapest — items with a "half loaf" or similar smaller
+        # variation were otherwise showing that lower price under the
+        # full-size item's name.
+        price = None
         for v in idata.get("variations", []):
             pm = v.get("item_variation_data", {}).get("price_money")
             if pm and pm.get("amount") is not None:
-                prices.append(pm["amount"] / 100)
-        if not prices:
+                price = pm["amount"] / 100
+                break
+        if price is None:
             continue
-        price = min(prices)
 
         description = (idata.get("description") or "").strip()
 
