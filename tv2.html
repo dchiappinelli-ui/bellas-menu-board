@@ -167,12 +167,12 @@
     letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
   }
   .menu-col .cat-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
-  .menu-col .items{ display:flex; flex-direction:column; overflow:hidden; }
+  .menu-col .items{ flex:1; min-height:0; display:flex; flex-direction:column; overflow:hidden; }
   .menu-item{
     display:flex; align-items:baseline; justify-content:space-between;
-    gap:14px; padding:8px 0;
+    gap:14px; padding:var(--mi-pad, 8px) 0;
     border-bottom:1px dashed rgba(167,156,137,0.18);
-    font-size:15px;
+    font-size:var(--mi-fs, 15px);
   }
   .menu-item:last-child{ border-bottom:none; }
   .menu-item .mi-name{ color:var(--cream); font-family:'Fraunces', serif; font-weight:500; min-width:0; }
@@ -439,20 +439,39 @@ const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "C
 
 function fmtPrice(p){ return '$' + p.toFixed(2); }
 
-function renderMenuColumn(el, items, limit){
+function renderMenuColumn(el, items){
   el.innerHTML = '';
-  items.slice(0, limit).forEach(it => {
+  items.forEach(it => {
     const row = document.createElement('div');
     row.className = 'menu-item';
     row.innerHTML = `<div class="mi-name">${it.name}</div><div class="mi-price">${fmtPrice(it.price)}</div>`;
     el.appendChild(row);
   });
+  autoFitColumn(el);
+}
+
+// Item counts vary night to night as the Square catalog changes, so instead
+// of a fixed item limit (which either wastes space or hard-clips content),
+// shrink font size and row padding step by step until everything fits the
+// column's actual available height.
+function autoFitColumn(el){
+  const maxFs = 15, minFs = 9.5;
+  const maxPad = 8, minPad = 2;
+  let fs = maxFs, pad = maxPad;
+  el.style.setProperty('--mi-fs', fs + 'px');
+  el.style.setProperty('--mi-pad', pad + 'px');
+  while (el.scrollHeight > el.clientHeight && (fs > minFs || pad > minPad)) {
+    if (fs > minFs) fs -= 0.5;
+    if (pad > minPad) pad -= 0.5;
+    el.style.setProperty('--mi-fs', fs + 'px');
+    el.style.setProperty('--mi-pad', pad + 'px');
+  }
 }
 
 function renderDrinksMenu(menu){
-  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || [], 11);
-  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || [], 7);
-  renderMenuColumn(document.getElementById('colBread'), menu['BREAD'] || [], 21);
+  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || []);
+  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || []);
+  renderMenuColumn(document.getElementById('colBread'), menu['BREAD'] || []);
 }
 
 renderDrinksMenu(DRINKS_MENU);

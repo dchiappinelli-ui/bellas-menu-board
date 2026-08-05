@@ -61,7 +61,7 @@
   #menuView{
     flex:1; display:flex; gap:0; padding:28px 40px 0; overflow:hidden;
   }
-  .column{ flex:1; display:flex; flex-direction:column; min-width:0; }
+  .column{ flex:1; display:flex; flex-direction:column; min-width:0; min-height:0; }
   .column + .column{ margin-left:44px; padding-left:44px; border-left:1px solid var(--panel-line); }
 
   .cat-head{ display:flex; align-items:center; gap:12px; margin-bottom:18px; }
@@ -72,16 +72,16 @@
   }
   .cat-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
 
-  .items{ display:flex; flex-direction:column; gap:0; overflow:hidden; }
+  .items{ flex:1; min-height:0; display:flex; flex-direction:column; gap:0; overflow:hidden; }
   .item{
     display:flex; align-items:baseline; justify-content:space-between;
-    gap:14px; padding:10px 0;
+    gap:14px; padding:var(--it-pad, 10px) 0;
     border-bottom:1px dashed rgba(167,156,137,0.18);
   }
   .item:last-child{ border-bottom:none; }
   .item-left{ min-width:0; }
   .item-name{
-    font-family:'Fraunces', serif; font-weight:500; font-size:16.5px; color:var(--cream);
+    font-family:'Fraunces', serif; font-weight:500; font-size:var(--it-fs, 16.5px); color:var(--cream);
     letter-spacing:0.2px;
   }
   .item-desc{
@@ -89,11 +89,11 @@
     max-width:420px;
   }
   .item-desc-lg{
-    font-size:13.5px; color:#C7B99C; margin-top:5px; line-height:1.5;
+    font-size:var(--it-desc-fs, 13.5px); color:#C7B99C; margin-top:var(--it-desc-mt, 5px); line-height:1.4;
     font-style:italic;
   }
   .item-price{
-    font-family:'Inter', sans-serif; font-weight:700; font-size:16.5px; color:var(--gold);
+    font-family:'Inter', sans-serif; font-weight:700; font-size:var(--it-fs, 16.5px); color:var(--gold);
     white-space:nowrap; flex-shrink:0;
   }
   .dots{ flex:1; border-bottom:none; }
@@ -241,9 +241,33 @@ const MENU = {"ARTISAN SANDWICHES": [{"name": "AVOCADO TOAST", "price": 12.95, "
 
 function fmtPrice(p){ return '$' + p.toFixed(2); }
 
-function renderSimpleColumn(el, items, limit){
+// Item counts vary night to night as the Square catalog changes, so instead
+// of a fixed item limit (which either wastes space or hard-clips content),
+// shrink font size / row padding / description size step by step until
+// everything actually fits the column's available height.
+function autoFitColumn(el, opts){
+  const { maxFs, minFs, maxPad, minPad, maxDescFs, minDescFs, maxDescMt, minDescMt } = opts;
+  let fs = maxFs, pad = maxPad, descFs = maxDescFs, descMt = maxDescMt;
+  function apply(){
+    el.style.setProperty('--it-fs', fs + 'px');
+    el.style.setProperty('--it-pad', pad + 'px');
+    if (maxDescFs !== undefined) el.style.setProperty('--it-desc-fs', descFs + 'px');
+    if (maxDescMt !== undefined) el.style.setProperty('--it-desc-mt', descMt + 'px');
+  }
+  apply();
+  while (el.scrollHeight > el.clientHeight &&
+         (fs > minFs || pad > minPad || (maxDescFs !== undefined && descFs > minDescFs))) {
+    if (fs > minFs) fs -= 0.4;
+    if (pad > minPad) pad -= 0.4;
+    if (maxDescFs !== undefined && descFs > minDescFs) descFs -= 0.4;
+    if (maxDescMt !== undefined && descMt > minDescMt) descMt -= 0.3;
+    apply();
+  }
+}
+
+function renderSimpleColumn(el, items){
   el.innerHTML = '';
-  items.slice(0, limit).forEach(it => {
+  items.forEach(it => {
     const row = document.createElement('div');
     row.className = 'item';
     row.innerHTML = `
@@ -252,11 +276,12 @@ function renderSimpleColumn(el, items, limit){
     `;
     el.appendChild(row);
   });
+  autoFitColumn(el, { maxFs:16.5, minFs:11, maxPad:10, minPad:3 });
 }
 
-function renderSandwichColumn(el, items, limit){
+function renderSandwichColumn(el, items){
   el.innerHTML = '';
-  items.slice(0, limit).forEach(it => {
+  items.forEach(it => {
     const row = document.createElement('div');
     row.className = 'item';
     row.innerHTML = `
@@ -268,11 +293,12 @@ function renderSandwichColumn(el, items, limit){
     `;
     el.appendChild(row);
   });
+  autoFitColumn(el, { maxFs:16.5, minFs:11, maxPad:10, minPad:3, maxDescFs:13.5, minDescFs:9.5, maxDescMt:5, minDescMt:1 });
 }
 
 function renderAll(menu){
-  renderSandwichColumn(document.getElementById('colSandwiches'), menu['ARTISAN SANDWICHES'] || [], 13);
-  renderSimpleColumn(document.getElementById('colPastry'), menu['GOURMET PASTRY'] || [], 16);
+  renderSandwichColumn(document.getElementById('colSandwiches'), menu['ARTISAN SANDWICHES'] || []);
+  renderSimpleColumn(document.getElementById('colPastry'), menu['GOURMET PASTRY'] || []);
 }
 
 // Render the embedded snapshot immediately so the board never shows blank,
