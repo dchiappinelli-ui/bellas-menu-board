@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video Test</title>
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  video { width:100vw; height:100vh; object-fit:contain; display:block; background:#333; }
+  #status {
+    position:fixed; top:0; left:0; right:0;
+    background:rgba(0,0,0,0.8); color:#0f0; font:16px monospace;
+    padding:8px; white-space:pre-wrap; z-index:10;
+  }
+</style>
+</head>
+<body>
+<div id="status">loading...</div>
+<video id="v" src="videos/panel-1.mp4" autoplay muted loop playsinline webkit-playsinline controls></video>
+<script>
+  const v = document.getElementById('v');
+  const status = document.getElementById('status');
+  function log(msg){
+    status.textContent += '\n' + msg;
+  }
+  log('src: ' + v.src);
+  v.addEventListener('loadstart', () => log('loadstart'));
+  v.addEventListener('loadedmetadata', () => log('loadedmetadata ' + v.videoWidth + 'x' + v.videoHeight));
+  v.addEventListener('loadeddata', () => log('loadeddata'));
+  v.addEventListener('canplay', () => log('canplay'));
+  v.addEventListener('playing', () => log('PLAYING'));
+  v.addEventListener('pause', () => log('paused'));
+  v.addEventListener('error', () => log('ERROR code=' + (v.error ? v.error.code : '?')));
+  v.addEventListener('stalled', () => log('stalled'));
+  v.addEventListener('suspend', () => log('suspend'));
+  v.play().then(() => log('play() resolved')).catch(e => log('play() REJECTED: ' + e.message));
+</script>
+</body>
+</html>
