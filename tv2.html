@@ -140,11 +140,18 @@
   #mediaDots .mdot{ width:7px; height:7px; border-radius:50%; background:var(--panel-line); transition:background 0.3s; }
   #mediaDots .mdot.on{ background:var(--gold); }
 
-  /* ---------- SIDE MENU (Coffee & Specialty Drinks) ---------- */
+  /* ---------- SIDE MENU (Coffee, Specialty Drinks & Bread) ---------- */
   #sideMenu{
     flex:1; min-width:0; margin-left:44px; padding-left:44px;
     border-left:1px solid var(--panel-line);
-    display:flex; flex-direction:column; gap:28px; min-height:0; overflow:hidden;
+    display:flex; flex-direction:row; gap:32px; min-height:0; overflow:hidden;
+  }
+  #sideMenuDrinks{
+    flex:1; min-width:0; display:flex; flex-direction:column; gap:28px; min-height:0;
+  }
+  #sideMenuBread{
+    flex:1; min-width:0; padding-left:32px; border-left:1px solid var(--panel-line);
+    display:flex; flex-direction:column; min-height:0;
   }
   .menu-col{ flex:1; display:flex; flex-direction:column; min-height:0; }
   .menu-col .cat-head{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-shrink:0; }
@@ -223,13 +230,19 @@
     </div>
 
     <div id="sideMenu">
-      <div class="menu-col">
-        <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
-        <div class="items" id="colCoffee"></div>
+      <div id="sideMenuDrinks">
+        <div class="menu-col">
+          <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
+          <div class="items" id="colCoffee"></div>
+        </div>
+        <div class="menu-col">
+          <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
+          <div class="items" id="colDrinks"></div>
+        </div>
       </div>
-      <div class="menu-col">
-        <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
-        <div class="items" id="colDrinks"></div>
+      <div id="sideMenuBread" class="menu-col">
+        <div class="cat-head"><h3>Bread</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colBread"></div>
       </div>
     </div>
   </div>
@@ -381,10 +394,10 @@ function animate(){
 }
 animate();
 
-// ================= SIDE MENU: Coffee & Specialty Drinks =================
+// ================= SIDE MENU: Coffee, Specialty Drinks & Bread =================
 // Embedded fallback snapshot, shown immediately and swapped for the live
 // nightly-synced data (same data/menu.json used by index.html) once it loads.
-const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "CAPPUCCINO", "price": 6.25}, {"name": "CEREMONIAL MATCHA LATTE", "price": 7.65}, {"name": "CHAI TEA LATTE", "price": 6.85}, {"name": "CORTADO", "price": 5.95}, {"name": "DRIP COFFEE", "price": 3.85}, {"name": "ESPRESSO", "price": 3.85}, {"name": "HOT CHOCOLATE", "price": 4.75}, {"name": "LATTE", "price": 6.5}, {"name": "MACCHIATO", "price": 4.65}, {"name": "TEA", "price": 3.75}], "SPECIALTY DRINKS": [{"name": "BLENDED NITRO COFFEE", "price": 6.95}, {"name": "LEMONADE REFRESHER", "price": 5.75}, {"name": "MIXED BERRY SMOOTHIE", "price": 9.85}, {"name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER", "price": 5.75}, {"name": "STRAWBERRY ACAI REFRESHER", "price": 5.75}, {"name": "TROPICAL SUNRISE SMOOTHIE", "price": 9.85}, {"name": "WATERMELLON REFRESHER", "price": 5.75}]};
+const DRINKS_MENU = {"COFFEE": [{"name": "AMERICANO", "price": 4.5}, {"name": "CAPPUCCINO", "price": 6.25}, {"name": "CEREMONIAL MATCHA LATTE", "price": 7.65}, {"name": "CHAI TEA LATTE", "price": 6.85}, {"name": "CORTADO", "price": 5.95}, {"name": "DRIP COFFEE", "price": 3.85}, {"name": "ESPRESSO", "price": 3.85}, {"name": "HOT CHOCOLATE", "price": 4.75}, {"name": "LATTE", "price": 6.5}, {"name": "MACCHIATO", "price": 4.65}, {"name": "TEA", "price": 3.75}], "SPECIALTY DRINKS": [{"name": "BLENDED NITRO COFFEE", "price": 6.95}, {"name": "LEMONADE REFRESHER", "price": 5.75}, {"name": "MIXED BERRY SMOOTHIE", "price": 9.85}, {"name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER", "price": 5.75}, {"name": "STRAWBERRY ACAI REFRESHER", "price": 5.75}, {"name": "TROPICAL SUNRISE SMOOTHIE", "price": 9.85}, {"name": "WATERMELLON REFRESHER", "price": 5.75}], "BREAD": [{"name": "ANTHONY LOAF", "price": 5.99}, {"name": "BAGEL FRESH 4 PACK", "price": 10.95}, {"name": "BRIOCHE HAMBURGER BUNS", "price": 2.25}, {"name": "BRIOCHE HOT DOG BUN", "price": 2.25}, {"name": "BRIOCHE LOAF", "price": 5.75}, {"name": "CIABATTA ROLLS", "price": 2.0}, {"name": "CINNAMON RAISIN BABKA", "price": 7.95}, {"name": "CLASSIC SOURDOUGH BREAD", "price": 11.95}, {"name": "CRANBERRY WALNUT SOURDOUGH", "price": 6.99}, {"name": "CROISSANT LOAF", "price": 22.0}, {"name": "EVERYTHING SOURDOUGH", "price": 12.99}, {"name": "EVERYTHING SOURDOUGH BAGEL", "price": 2.95}, {"name": "FRENCH BAGUETTE", "price": 6.95}, {"name": "Focaccia Square", "price": 6.0}, {"name": "HALF CINNAMON RAISIN BABKA", "price": 14.0}, {"name": "HALF CROISSANT LOAF", "price": 11.99}, {"name": "IRISH SODA BREAD", "price": 11.99}, {"name": "OLIVE SOURDOUGH", "price": 6.95}, {"name": "Prosciutto Baguette", "price": 6.99}, {"name": "SOURDOUGH BAGEL", "price": 2.95}, {"name": "SOURDOUGH BAGEL CHIPS", "price": 4.75}, {"name": "SOURDOUGH PRETZEL", "price": 6.75}]};
 
 function fmtPrice(p){ return '$' + p.toFixed(2); }
 
@@ -399,8 +412,9 @@ function renderMenuColumn(el, items, limit){
 }
 
 function renderDrinksMenu(menu){
-  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || [], 11);
-  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || [], 8);
+  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || [], 8);
+  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || [], 6);
+  renderMenuColumn(document.getElementById('colBread'), menu['BREAD'] || [], 16);
 }
 
 renderDrinksMenu(DRINKS_MENU);
