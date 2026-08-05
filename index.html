@@ -123,6 +123,21 @@
     text-transform:uppercase; font-weight:600;
   }
 
+  /* ---------- PHOTO VIEW ---------- */
+  #photoView{
+    flex:1; display:none; position:relative; overflow:hidden;
+  }
+  #photoView img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  #photoView .photo-caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:26px 40px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+    font-family:'Fraunces', serif; font-weight:600; font-size:22px;
+    letter-spacing:0.5px; color:var(--cream); text-transform:uppercase;
+  }
+
   /* ---------- SCROLLING MARQUEE ---------- */
   #marqueeWrap{
     flex-shrink:0; overflow:hidden; white-space:nowrap;
@@ -206,6 +221,11 @@
     <h2>Double points on <em>every</em> Slow Hours order</h2>
     <p class="sub">Earn 2x loyalty points on anything ordered between 8&nbsp;&ndash;&nbsp;10am. 10 points gets you a free coffee, any size.</p>
     <div class="promo-badge">Ask about Bella's Rewards</div>
+  </div>
+
+  <div id="photoView">
+    <img id="photoImg" src="" alt="">
+    <div class="photo-caption" id="photoCaption"></div>
   </div>
 
   <div id="marqueeWrap">
@@ -311,10 +331,24 @@ function tickClock(){
 tickClock();
 setInterval(tickClock, 1000 * 15);
 
-// rotation: cycles through menu / drinks-bread / promo, with progress bar
+// photo rotation: cycles the photo slide through this list each time it comes up
+const PHOTOS = [
+  { src: 'photos/sandwich-1.jpg', caption: 'Caprese Croissant' },
+  { src: 'photos/crobec.jpg', caption: 'Croissant Bacon Egg & Cheese' },
+];
+let photoIdx = 0;
+function showNextPhoto(){
+  const p = PHOTOS[photoIdx % PHOTOS.length];
+  document.getElementById('photoImg').src = p.src;
+  document.getElementById('photoCaption').textContent = p.caption;
+  photoIdx++;
+}
+
+// rotation: cycles through menu / promo / photo, with progress bar
 const slides = [
   { el: document.getElementById('menuView'),   duration: 18000, display: 'flex' },
   { el: document.getElementById('promoView'),  duration: 7000,  display: 'flex' },
+  { el: document.getElementById('photoView'),  duration: 7000,  display: 'flex', onEnter: showNextPhoto },
 ];
 const progress = document.getElementById('progress');
 
@@ -325,6 +359,7 @@ function showSlide(i){
   slides.forEach((s, idx) => { s.el.style.display = idx === i ? s.display : 'none'; });
   current = i;
   phaseStart = Date.now();
+  if (slides[i].onEnter) slides[i].onEnter();
 }
 showSlide(0);
 
