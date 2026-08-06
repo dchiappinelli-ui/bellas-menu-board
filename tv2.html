@@ -34,28 +34,28 @@
       var(--board);
   }
 
-  /* ---------- HEADER ---------- */
+  /* ---------- HEADER (compact, to leave more room for the menu) ---------- */
   header{
     display:flex; align-items:center; justify-content:space-between;
-    padding:22px 40px 16px;
+    padding:8px 40px 6px;
     border-bottom:1px solid var(--panel-line);
     flex-shrink:0;
   }
-  .brand{ display:flex; align-items:center; gap:14px; }
-  .wheat{ width:34px; height:34px; flex-shrink:0; }
+  .brand{ display:flex; align-items:center; gap:9px; }
+  .wheat{ width:18px; height:18px; flex-shrink:0; }
   .brand-text h1{
-    font-family:'Fraunces', serif; font-weight:600; font-size:26px;
-    letter-spacing:0.5px; color:var(--cream); line-height:1;
+    font-family:'Fraunces', serif; font-weight:600; font-size:15px;
+    letter-spacing:0.4px; color:var(--cream); line-height:1;
   }
   .brand-text span{
-    font-size:11px; letter-spacing:3px; color:var(--gold); text-transform:uppercase;
+    font-size:8.5px; letter-spacing:2px; color:var(--gold); text-transform:uppercase;
   }
   .clockbox{ text-align:right; }
   #clock{
-    font-family:'Fraunces', serif; font-weight:500; font-size:26px; color:var(--gold-soft);
+    font-family:'Fraunces', serif; font-weight:500; font-size:15px; color:var(--gold-soft);
     font-variant-numeric: tabular-nums;
   }
-  #dateline{ font-size:11px; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; }
+  #dateline{ font-size:8.5px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; }
 
   /* ---------- MAIN LAYOUT ---------- */
   #main{
@@ -163,7 +163,7 @@
   .menu-col{ flex:1; display:flex; flex-direction:column; min-height:0; }
   .menu-col .cat-head{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-shrink:0; }
   .menu-col .cat-head h3{
-    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:22px;
     letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
   }
   .menu-col .cat-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
@@ -455,8 +455,8 @@ function renderMenuColumn(el, items){
 // shrink font size and row padding step by step until everything fits the
 // column's actual available height.
 function autoFitColumn(el){
-  const maxFs = 15, minFs = 9.5;
-  const maxPad = 8, minPad = 2;
+  const maxFs = 20, minFs = 11;
+  const maxPad = 12, minPad = 3;
   let fs = maxFs, pad = maxPad;
   el.style.setProperty('--mi-fs', fs + 'px');
   el.style.setProperty('--mi-pad', pad + 'px');
