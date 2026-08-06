@@ -153,21 +153,20 @@
     border-left:1px solid var(--panel-line);
     display:flex; flex-direction:row; gap:32px; min-height:0; overflow:hidden;
   }
-  #sideMenuCoffee{
-    flex:1; min-width:0;
-  }
-  #sideMenuDrinksBread{
-    flex:1; min-width:0; padding-left:32px; border-left:1px solid var(--panel-line);
-    display:flex; flex-direction:column; gap:28px; min-height:0;
-  }
-  .menu-col{ flex:1; display:flex; flex-direction:column; min-height:0; }
+  .menu-col{ flex:1; min-width:0; display:flex; flex-direction:column; min-height:0; }
+  .menu-col + .menu-col{ padding-left:32px; border-left:1px solid var(--panel-line); }
   .menu-col .cat-head{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-shrink:0; }
   .menu-col .cat-head h3{
     font-family:'Fraunces', serif; font-weight:600; font-size:22px;
     letter-spacing:1px; color:var(--gold-soft); text-transform:uppercase;
   }
   .menu-col .cat-rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--panel-line), transparent); }
-  .menu-col .items{ flex:1; min-height:0; display:flex; flex-direction:column; overflow:hidden; }
+  /* space-between spreads rows to fill the column's full height instead of
+     clustering at the top when a category has fewer items than the others */
+  .menu-col .items{
+    flex:1; min-height:0; display:flex; flex-direction:column;
+    justify-content:space-between; overflow:hidden;
+  }
   .menu-item{
     display:flex; align-items:baseline; justify-content:space-between;
     gap:14px; padding:var(--mi-pad, 8px) 0;
@@ -237,19 +236,17 @@
     </div>
 
     <div id="sideMenu">
-      <div id="sideMenuCoffee" class="menu-col">
+      <div class="menu-col">
         <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
         <div class="items" id="colCoffee"></div>
       </div>
-      <div id="sideMenuDrinksBread">
-        <div class="menu-col">
-          <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
-          <div class="items" id="colDrinks"></div>
-        </div>
-        <div class="menu-col">
-          <div class="cat-head"><h3>Bread</h3><div class="cat-rule"></div></div>
-          <div class="items" id="colBread"></div>
-        </div>
+      <div class="menu-col">
+        <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colDrinks"></div>
+      </div>
+      <div class="menu-col">
+        <div class="cat-head"><h3>Bread</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colBread"></div>
       </div>
     </div>
   </div>
@@ -454,8 +451,8 @@ function renderMenuColumn(el, items){
 // shrink font size and row padding step by step until everything fits the
 // column's actual available height. Returns the final {fs, pad} it settled on.
 function fitColumn(el){
-  const maxFs = 20, minFs = 11;
-  const maxPad = 12, minPad = 3;
+  const maxFs = 23, minFs = 12;
+  const maxPad = 14, minPad = 4;
   let fs = maxFs, pad = maxPad;
   el.style.setProperty('--mi-fs', fs + 'px');
   el.style.setProperty('--mi-pad', pad + 'px');
