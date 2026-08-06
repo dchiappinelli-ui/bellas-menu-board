@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Bella's Bake Shop — Behind the Scenes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --board:#14100D;
@@ -98,6 +98,33 @@
     font-family:'Fraunces', serif; font-weight:500; font-size:16px;
     letter-spacing:0.5px; color:var(--cream); text-transform:uppercase;
   }
+  /* playful, marketing-style caption treatment for select videos */
+  .media-slide.video-slide .caption.caption-fun{
+    padding:22px 24px 26px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2) 70%, transparent);
+  }
+  .caption-fun .caption-text{
+    font-family:'Baloo 2', sans-serif; font-weight:800; font-size:30px;
+    letter-spacing:0.3px; text-transform:none; line-height:1.15;
+    color:var(--gold-soft); /* solid-color fallback if gradient-text isn't supported */
+    text-shadow:0 2px 10px rgba(0,0,0,0.4);
+    display:inline-block;
+  }
+  @supports ((background-clip: text) or (-webkit-background-clip: text)){
+    .caption-fun .caption-text{
+      background:linear-gradient(90deg, #FF6FA8, var(--gold-soft) 50%, #7FD8C4);
+      background-clip:text; -webkit-background-clip:text;
+      color:transparent; -webkit-text-fill-color:transparent;
+    }
+  }
+  .new-badge{
+    position:absolute; top:20px; right:20px; z-index:2;
+    background:linear-gradient(135deg, #FF6FA8, #FF3E7F);
+    color:#fff; font-family:'Baloo 2', sans-serif; font-weight:800; font-size:15px;
+    padding:7px 18px; border-radius:999px; letter-spacing:1px;
+    transform:rotate(-6deg);
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+  }
   .placeholder-overlay{
     position:absolute; inset:0; display:none;
     flex-direction:column; align-items:center; justify-content:center;
@@ -131,6 +158,11 @@
   .promo-slide p.sub{
     margin-top:14px; font-size:13.5px; color:var(--muted); line-height:1.5; max-width:100%;
   }
+  .social-row{
+    display:flex; align-items:center; gap:10px; margin-top:10px;
+    font-size:15px; color:var(--cream); font-weight:600;
+  }
+  .social-row svg{ color:var(--gold-soft); flex-shrink:0; }
   .promo-badge{
     margin-top:20px; display:inline-flex; align-items:center; gap:10px;
     background:var(--board); border:1px solid var(--gold); border-radius:999px;
@@ -274,9 +306,14 @@
 const VIDEO_CAPTIONS = {
   1: 'David and Martha',
   2: 'Brioche Ice Cream Sandwich',
-  3: 'Cake Decorating',
-  4: 'Espresso Bar',
+  3: 'Artisan Baking',
+  4: 'Artisan Pastry',
 };
+// Panels listed here get the bold, colorful "marketing" caption treatment
+// instead of the standard understated one.
+const FUN_CAPTION_PANELS = new Set([2]);
+// Panels listed here get a "NEW" sticker badge in the corner.
+const NEW_BADGE_PANELS = new Set([2]);
 
 const PROMOS = [
   {
@@ -292,10 +329,18 @@ const PROMOS = [
     badge: 'Come see the kitchen',
   },
   {
-    tag: 'weekends',
-    title: 'Custom cakes for <em>any</em> occasion',
-    sub: "Ask a team member about ordering a custom cake for your next birthday, shower, or celebration.",
+    tag: 'hosting soon?',
+    title: 'Let us cater your <em>next</em> brunch gathering',
+    sub: "From pastries and sandwich platters to coffee service, ask a team member about catering for your next brunch, shower, or celebration.",
     badge: 'Ask in store',
+  },
+  {
+    tag: 'follow along',
+    title: 'Follow us on <em>TikTok</em> &amp; <em>Instagram</em>',
+    sub: 'See what\'s coming out of the kitchen and hear about specials first.'
+      + '<div class="social-row"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.6 3c.4 2.7 2.1 4.5 4.9 4.8v3.1c-1.8 0-3.5-.6-4.9-1.6v6.4c0 3.5-2.9 6.3-6.4 6.3S3.8 19.2 3.8 15.7s2.9-6.3 6.4-6.3c.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.3-1.4 3.3-3.2V3h3.1z"/></svg> TikTok: @bellasbakeshop</div>'
+      + '<div class="social-row"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram: @bellasbakeshopny</div>',
+    badge: 'Give us a follow',
   },
 ];
 
@@ -356,11 +401,20 @@ const slides = slidePlan.map((plan, i) => {
       <div class="ph-path">videos/panel-${n}.mp4</div>
     `;
     const cap = document.createElement('div');
-    cap.className = 'caption';
-    cap.textContent = VIDEO_CAPTIONS[n] || '';
+    cap.className = 'caption' + (FUN_CAPTION_PANELS.has(n) ? ' caption-fun' : '');
+    const capText = document.createElement('span');
+    capText.className = 'caption-text';
+    capText.textContent = VIDEO_CAPTIONS[n] || '';
+    cap.appendChild(capText);
 
     el.appendChild(video);
     el.appendChild(cap);
+    if (NEW_BADGE_PANELS.has(n)) {
+      const badge = document.createElement('div');
+      badge.className = 'new-badge';
+      badge.textContent = 'NEW';
+      el.appendChild(badge);
+    }
     el.appendChild(overlay);
 
     video.addEventListener('error', () => el.classList.add('placeholder'), { once: true });
