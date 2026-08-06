@@ -153,12 +153,12 @@
     border-left:1px solid var(--panel-line);
     display:flex; flex-direction:row; gap:32px; min-height:0; overflow:hidden;
   }
-  #sideMenuDrinks{
-    flex:1; min-width:0; display:flex; flex-direction:column; gap:28px; min-height:0;
+  #sideMenuCoffee{
+    flex:1; min-width:0;
   }
-  #sideMenuBread{
+  #sideMenuDrinksBread{
     flex:1; min-width:0; padding-left:32px; border-left:1px solid var(--panel-line);
-    display:flex; flex-direction:column; min-height:0;
+    display:flex; flex-direction:column; gap:28px; min-height:0;
   }
   .menu-col{ flex:1; display:flex; flex-direction:column; min-height:0; }
   .menu-col .cat-head{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-shrink:0; }
@@ -237,19 +237,19 @@
     </div>
 
     <div id="sideMenu">
-      <div id="sideMenuDrinks">
-        <div class="menu-col">
-          <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
-          <div class="items" id="colCoffee"></div>
-        </div>
+      <div id="sideMenuCoffee" class="menu-col">
+        <div class="cat-head"><h3>Coffee</h3><div class="cat-rule"></div></div>
+        <div class="items" id="colCoffee"></div>
+      </div>
+      <div id="sideMenuDrinksBread">
         <div class="menu-col">
           <div class="cat-head"><h3>Specialty Drinks</h3><div class="cat-rule"></div></div>
           <div class="items" id="colDrinks"></div>
         </div>
-      </div>
-      <div id="sideMenuBread" class="menu-col">
-        <div class="cat-head"><h3>Bread</h3><div class="cat-rule"></div></div>
-        <div class="items" id="colBread"></div>
+        <div class="menu-col">
+          <div class="cat-head"><h3>Bread</h3><div class="cat-rule"></div></div>
+          <div class="items" id="colBread"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -447,14 +447,13 @@ function renderMenuColumn(el, items){
     row.innerHTML = `<div class="mi-name">${it.name}</div><div class="mi-price">${fmtPrice(it.price)}</div>`;
     el.appendChild(row);
   });
-  autoFitColumn(el);
 }
 
 // Item counts vary night to night as the Square catalog changes, so instead
 // of a fixed item limit (which either wastes space or hard-clips content),
 // shrink font size and row padding step by step until everything fits the
-// column's actual available height.
-function autoFitColumn(el){
+// column's actual available height. Returns the final {fs, pad} it settled on.
+function fitColumn(el){
   const maxFs = 20, minFs = 11;
   const maxPad = 12, minPad = 3;
   let fs = maxFs, pad = maxPad;
@@ -466,12 +465,28 @@ function autoFitColumn(el){
     el.style.setProperty('--mi-fs', fs + 'px');
     el.style.setProperty('--mi-pad', pad + 'px');
   }
+  return { fs, pad };
 }
 
 function renderDrinksMenu(menu){
-  renderMenuColumn(document.getElementById('colCoffee'), menu['COFFEE'] || []);
-  renderMenuColumn(document.getElementById('colDrinks'), menu['SPECIALTY DRINKS'] || []);
-  renderMenuColumn(document.getElementById('colBread'), menu['BREAD'] || []);
+  const cols = [
+    document.getElementById('colCoffee'),
+    document.getElementById('colDrinks'),
+    document.getElementById('colBread'),
+  ];
+  renderMenuColumn(cols[0], menu['COFFEE'] || []);
+  renderMenuColumn(cols[1], menu['SPECIALTY DRINKS'] || []);
+  renderMenuColumn(cols[2], menu['BREAD'] || []);
+
+  // Fit each column independently first, then apply the smallest resulting
+  // size to all three so item text reads as one consistent size across the
+  // whole side menu, rather than each column landing on its own size.
+  const fits = cols.map(fitColumn);
+  const shared = fits.reduce((a, b) => (b.fs < a.fs ? b : a));
+  cols.forEach(el => {
+    el.style.setProperty('--mi-fs', shared.fs + 'px');
+    el.style.setProperty('--mi-pad', shared.pad + 'px');
+  });
 }
 
 renderDrinksMenu(DRINKS_MENU);
