@@ -1,210 +1,6 @@
 {
-  "synced_at": "2026-08-07T06:55:14.464957+00:00",
+  "synced_at": "2026-08-08T05:31:03.293121+00:00",
   "menu": {
-    "GOURMET PASTRY": [
-      {
-        "name": "8-10AM COMBO SPECIAL",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "ALMOND MAPLE CROISSANT",
-        "price": 6.95,
-        "description": "A flaky, buttery croissant filled with a rich praline paste, topped with crunchy almonds, and drizzled with a sweet maple glaze."
-      },
-      {
-        "name": "APPLE CINNAMON PULL APART",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "BACON CHEDDAR SCONE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "BUNNY FRENCH MACARON",
-        "price": 4.25,
-        "description": "Hand made bunny macaron"
-      },
-      {
-        "name": "BUTTER CROISSANT",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "CAKE POP",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "CANNOLI",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CHEESE DANISH",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CAKE (SLICE)",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CROISSANT",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      },
-      {
-        "name": "CINNAMON BUN",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "COFFEE CAKE SLICE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "CROISSANT COBBLER (BLUEBERRY)",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "CROISSANT GARLIC TWIST",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CROOKIE CROISSANT",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "CRUMBTOP BLUEBERRY MUFFIN",
-        "price": 4.99,
-        "description": ""
-      },
-      {
-        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "Chocolate Toffee Crunch",
-        "price": 5.25,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING ROUND CROISSANT",
-        "price": 6.75,
-        "description": ""
-      },
-      {
-        "name": "LEMON CAKE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "PISTACHIO CREAM CROISSANT",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "RASPBERRY CREAM CROISSANT",
-        "price": 9.25,
-        "description": ""
-      },
-      {
-        "name": "ST. JOSEPH'S PASTRY",
-        "price": 7.25,
-        "description": ""
-      },
-      {
-        "name": "STRAWBERRY CREAM CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
-    "COFFEE": [
-      {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "MACCHIATO",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "SPECIALTY DRINKS": [
       {
         "name": "BLENDED NITRO COFFEE",
@@ -428,6 +224,215 @@
       {
         "name": "SOURDOUGH PRETZEL",
         "price": 6.75,
+        "description": ""
+      }
+    ],
+    "GOURMET PASTRY": [
+      {
+        "name": "8-10AM COMBO SPECIAL",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "ALMOND MAPLE CROISSANT",
+        "price": 6.95,
+        "description": "A flaky, buttery croissant filled with a rich praline paste, topped with crunchy almonds, and drizzled with a sweet maple glaze."
+      },
+      {
+        "name": "APPLE CINNAMON PULL APART",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "BACON CHEDDAR SCONE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE ICE CREAM SANDWICH",
+        "price": 8.95,
+        "description": ""
+      },
+      {
+        "name": "BUNNY FRENCH MACARON",
+        "price": 4.25,
+        "description": "Hand made bunny macaron"
+      },
+      {
+        "name": "BUTTER CROISSANT",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "CAKE POP",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "CANNOLI",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CHEESE DANISH",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CAKE (SLICE)",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CROISSANT",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      },
+      {
+        "name": "CINNAMON BUN",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "COFFEE CAKE SLICE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "CROISSANT COBBLER (BLUEBERRY)",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "CROISSANT GARLIC TWIST",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CROOKIE CROISSANT",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "CRUMBTOP BLUEBERRY MUFFIN",
+        "price": 4.99,
+        "description": ""
+      },
+      {
+        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Toffee Crunch",
+        "price": 5.25,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING ROUND CROISSANT",
+        "price": 6.75,
+        "description": ""
+      },
+      {
+        "name": "LEMON CAKE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "PISTACHIO CREAM CROISSANT",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "RASPBERRY CREAM CROISSANT",
+        "price": 9.25,
+        "description": ""
+      },
+      {
+        "name": "ST. JOSEPH'S PASTRY",
+        "price": 7.25,
+        "description": ""
+      },
+      {
+        "name": "STRAWBERRY CREAM CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "AMERICANO",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "CAPPUCCINO",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CORTADO",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "DRIP COFFEE",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "ESPRESSO",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "HOT CHOCOLATE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "LATTE",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "MACCHIATO",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "TEA",
+        "price": 3.75,
         "description": ""
       }
     ]
