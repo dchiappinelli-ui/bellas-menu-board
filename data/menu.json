@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-08-13T08:06:07.014853+00:00",
+  "synced_at": "2026-08-14T08:01:36.849635+00:00",
   "menu": {
     "GOURMET PASTRY": [
       {
@@ -153,140 +153,6 @@
         "description": ""
       }
     ],
-    "ARTISAN SANDWICHES": [
-      {
-        "name": "AVOCADO TOAST",
-        "price": 12.95,
-        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
-      },
-      {
-        "name": "BELLA'S RICOTTA BRUSCHETTA",
-        "price": 14.0,
-        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED TOMATO"
-      },
-      {
-        "name": "BELLAS CHICKEN BTB PANINI",
-        "price": 16.95,
-        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL, PESTO, BALSAMIC MAYO ON FOCACCIA"
-      },
-      {
-        "name": "BRUNCH BLISS",
-        "price": 16.95,
-        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
-      },
-      {
-        "name": "CANNOLI CROISSANT",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "CAPRESE CROISSANT",
-        "price": 13.25,
-        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
-      },
-      {
-        "name": "CROBEC",
-        "price": 12.95,
-        "description": "CROISSANT BACON EGG & CHEESE"
-      },
-      {
-        "name": "HAM & CHEESE DELUX",
-        "price": 14.95,
-        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.99,
-        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "MEDITERRANEAN BLISS",
-        "price": 19.65,
-        "description": "BURRATA, PROSCIUTTO ON TOASTED SOURDOUGH, ARUGULA, PESTO, BALSAMIC GLAZE"
-      },
-      {
-        "name": "THE CRAN-WALNUT CHICKEN SOURDOUGH",
-        "price": 13.45,
-        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON  OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD."
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.95,
-        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "TURKEY CLUB",
-        "price": 16.0,
-        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
-      }
-    ],
-    "COFFEE": [
-      {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "MACCHIATO",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "BREAD": [
       {
         "name": "ANTHONY LOAF",
@@ -434,6 +300,140 @@
         "name": "WATERMELON REFRESHER",
         "price": 5.75,
         "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "AMERICANO",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "CAPPUCCINO",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CORTADO",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "DRIP COFFEE",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "ESPRESSO",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "HOT CHOCOLATE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "LATTE",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "MACCHIATO",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "TEA",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "ARTISAN SANDWICHES": [
+      {
+        "name": "AVOCADO TOAST",
+        "price": 12.95,
+        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
+      },
+      {
+        "name": "BELLA'S RICOTTA BRUSCHETTA",
+        "price": 14.0,
+        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED TOMATO"
+      },
+      {
+        "name": "BELLAS CHICKEN BTB PANINI",
+        "price": 16.95,
+        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL, PESTO, BALSAMIC MAYO ON FOCACCIA"
+      },
+      {
+        "name": "BRUNCH BLISS",
+        "price": 16.95,
+        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
+      },
+      {
+        "name": "CANNOLI CROISSANT",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "CAPRESE CROISSANT",
+        "price": 13.25,
+        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
+      },
+      {
+        "name": "CROBEC",
+        "price": 12.95,
+        "description": "CROISSANT BACON EGG & CHEESE"
+      },
+      {
+        "name": "HAM & CHEESE DELUX",
+        "price": 14.95,
+        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
+      },
+      {
+        "name": "HAM AND SWISS SOURDOUGH (GRAB AND GO)",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "HAM AND SWISS SOURDOUGH SANDWICH",
+        "price": 12.99,
+        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      },
+      {
+        "name": "MEDITERRANEAN BLISS",
+        "price": 19.65,
+        "description": "BURRATA, PROSCIUTTO ON TOASTED SOURDOUGH, ARUGULA, PESTO, BALSAMIC GLAZE"
+      },
+      {
+        "name": "THE CRAN-WALNUT CHICKEN SOURDOUGH",
+        "price": 13.45,
+        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON  OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD."
+      },
+      {
+        "name": "TURKEY AND SWISS SOURDOUGH (GRAB AND GO)",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "TURKEY AND SWISS SOURDOUGH SANDWICH",
+        "price": 12.95,
+        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      },
+      {
+        "name": "TURKEY CLUB",
+        "price": 16.0,
+        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
       }
     ]
   }
