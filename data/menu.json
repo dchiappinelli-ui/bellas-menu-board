@@ -1,68 +1,6 @@
 {
-  "synced_at": "2026-08-31T09:38:03.245308+00:00",
+  "synced_at": "2026-09-01T08:34:08.494427+00:00",
   "menu": {
-    "COFFEE": [
-      {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "ICED COFFEE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "MACCHIATO",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "BREAD": [
       {
         "name": "ANTHONY LOAF",
@@ -323,6 +261,68 @@
       },
       {
         "name": "VANILLA FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "AMERICANO",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "CAPPUCCINO",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CORTADO",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "DRIP COFFEE",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "ESPRESSO",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "HOT CHOCOLATE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "ICED COFFEE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "LATTE",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "MACCHIATO",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "TEA",
         "price": 3.75,
         "description": ""
       }
