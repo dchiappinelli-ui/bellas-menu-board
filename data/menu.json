@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-09-01T08:34:08.494427+00:00",
+  "synced_at": "2026-09-02T07:50:54.782971+00:00",
   "menu": {
     "BREAD": [
       {
@@ -265,68 +265,6 @@
         "description": ""
       }
     ],
-    "COFFEE": [
-      {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "ICED COFFEE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "MACCHIATO",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "SPECIALTY DRINKS": [
       {
         "name": "BLENDED NITRO COFFEE",
@@ -449,6 +387,68 @@
         "name": "TURKEY CLUB",
         "price": 16.0,
         "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "AMERICANO",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "CAPPUCCINO",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CORTADO",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "DRIP COFFEE",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "ESPRESSO",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "HOT CHOCOLATE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "ICED COFFEE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "LATTE",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "MACCHIATO",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "TEA",
+        "price": 3.75,
+        "description": ""
       }
     ]
   }
