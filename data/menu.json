@@ -1,6 +1,43 @@
 {
-  "synced_at": "2026-09-07T08:12:04.470415+00:00",
+  "synced_at": "2026-09-08T08:00:03.860300+00:00",
   "menu": {
+    "SPECIALTY DRINKS": [
+      {
+        "name": "BLENDED NITRO COFFEE",
+        "price": 6.95,
+        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
+      },
+      {
+        "name": "LEMONADE REFRESHER",
+        "price": 5.75,
+        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      },
+      {
+        "name": "MIXED BERRY SMOOTHIE",
+        "price": 9.85,
+        "description": "Berry smoothie"
+      },
+      {
+        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
+      },
+      {
+        "name": "STRAWBERRY ACAI REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
+      },
+      {
+        "name": "TROPICAL SUNRISE SMOOTHIE",
+        "price": 9.85,
+        "description": ""
+      },
+      {
+        "name": "WATERMELON REFRESHER",
+        "price": 5.75,
+        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      }
+    ],
     "BREAD": [
       {
         "name": "ANTHONY LOAF",
@@ -325,43 +362,6 @@
         "name": "VANILLA FRENCH CRULLER",
         "price": 3.75,
         "description": ""
-      }
-    ],
-    "SPECIALTY DRINKS": [
-      {
-        "name": "BLENDED NITRO COFFEE",
-        "price": 6.95,
-        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
-      },
-      {
-        "name": "LEMONADE REFRESHER",
-        "price": 5.75,
-        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
-      },
-      {
-        "name": "MIXED BERRY SMOOTHIE",
-        "price": 9.85,
-        "description": "Berry smoothie"
-      },
-      {
-        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
-      },
-      {
-        "name": "STRAWBERRY ACAI REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
-      },
-      {
-        "name": "TROPICAL SUNRISE SMOOTHIE",
-        "price": 9.85,
-        "description": ""
-      },
-      {
-        "name": "WATERMELON REFRESHER",
-        "price": 5.75,
-        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
       }
     ],
     "ARTISAN SANDWICHES": [
