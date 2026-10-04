@@ -1,275 +1,6 @@
 {
-  "synced_at": "2026-10-03T09:03:47.142697+00:00",
+  "synced_at": "2026-10-04T09:38:10.074324+00:00",
   "menu": {
-    "GOURMET PASTRY": [
-      {
-        "name": "$10 Bag Too Good",
-        "price": 10.0,
-        "description": "too good to go bag of croissants"
-      },
-      {
-        "name": "8-10AM COMBO SPECIAL",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "ALMOND MAPLE CROISSANT",
-        "price": 6.95,
-        "description": "Chef's Favorite"
-      },
-      {
-        "name": "APPLE CINNAMON PULL APART",
-        "price": 5.95,
-        "description": "Your perfect every day pastry"
-      },
-      {
-        "name": "BACON CHEDDAR SCONE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE ICE CREAM SANDWICH",
-        "price": 8.95,
-        "description": ""
-      },
-      {
-        "name": "BUNNY FRENCH MACARON",
-        "price": 4.25,
-        "description": "Hand made bunny macaron"
-      },
-      {
-        "name": "BUTTER CROISSANT",
-        "price": 5.95,
-        "description": "World Class"
-      },
-      {
-        "name": "CAKE POP",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "CANNOLI",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CARAMEL APPLE CIDER CROISSANT",
-        "price": 8.75,
-        "description": "A flaky, caramel apple  and drizzled with a cider-infused glaze for a seasonal treat."
-      },
-      {
-        "name": "CHEESE DANISH",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CAKE (SLICE)",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CROISSANT",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      },
-      {
-        "name": "CINNAMON BUN",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "COFFEE CAKE SLICE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "CROISSANT GARLIC TWIST",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CROOKIE CROISSANT",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "CRUMBTOP BLUEBERRY MUFFIN",
-        "price": 4.99,
-        "description": ""
-      },
-      {
-        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING ROUND CROISSANT",
-        "price": 6.75,
-        "description": "Great for Sandwiches or Burgers....or on its own of course."
-      },
-      {
-        "name": "LEMON CAKE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "PISTACHIO CREAM CROISSANT",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "RASPBERRY CREAM CROISSANT",
-        "price": 9.25,
-        "description": ""
-      },
-      {
-        "name": "Round Croissant 3 Pack",
-        "price": 19.95,
-        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
-      },
-      {
-        "name": "ST. JOSEPH'S PASTRY",
-        "price": 7.25,
-        "description": ""
-      },
-      {
-        "name": "STRAWBERRY CREAM CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
-    "BREAD": [
-      {
-        "name": "ANTHONY LOAF",
-        "price": 11.0,
-        "description": ""
-      },
-      {
-        "name": "BAGEL FRESH 4 PACK",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE HAMBURGER BUNS",
-        "price": 7.95,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE HOT DOG BUN",
-        "price": 11.95,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE LOAF",
-        "price": 16.95,
-        "description": ""
-      },
-      {
-        "name": "CIABATTA ROLLS",
-        "price": 2.0,
-        "description": ""
-      },
-      {
-        "name": "CINNAMON RAISIN BABKA",
-        "price": 7.95,
-        "description": ""
-      },
-      {
-        "name": "CLASSIC SOURDOUGH BREAD",
-        "price": 11.95,
-        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
-      },
-      {
-        "name": "CRANBERRY WALNUT SOURDOUGH",
-        "price": 12.95,
-        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
-      },
-      {
-        "name": "CROISSANT LOAF",
-        "price": 22.0,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING SOURDOUGH",
-        "price": 12.99,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING SOURDOUGH BAGEL",
-        "price": 2.95,
-        "description": ""
-      },
-      {
-        "name": "FRENCH BAGUETTE",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Focaccia Square",
-        "price": 6.0,
-        "description": ""
-      },
-      {
-        "name": "HALF CINNAMON RAISIN BABKA",
-        "price": 14.0,
-        "description": ""
-      },
-      {
-        "name": "HALF CROISSANT LOAF",
-        "price": 11.99,
-        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
-      },
-      {
-        "name": "IRISH SODA BREAD",
-        "price": 11.99,
-        "description": ""
-      },
-      {
-        "name": "ITALIAN FARFALE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "OLIVE SOURDOUGH",
-        "price": 12.95,
-        "description": ""
-      },
-      {
-        "name": "Prosciutto Baguette",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "SOURDOUGH BAGEL",
-        "price": 2.95,
-        "description": ""
-      },
-      {
-        "name": "SOURDOUGH PRETZEL",
-        "price": 6.75,
-        "description": ""
-      }
-    ],
     "SPECIALTY DRINKS": [
       {
         "name": "BLENDED NITRO COFFEE",
@@ -459,6 +190,280 @@
         "name": "TURKEY CLUB",
         "price": 16.0,
         "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
+      }
+    ],
+    "GOURMET PASTRY": [
+      {
+        "name": "$10 Bag Too Good",
+        "price": 10.0,
+        "description": "too good to go bag of croissants"
+      },
+      {
+        "name": "8-10AM COMBO SPECIAL",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "ALMOND MAPLE CROISSANT",
+        "price": 6.95,
+        "description": "Chef's Favorite"
+      },
+      {
+        "name": "APPLE CINNAMON PULL APART",
+        "price": 5.95,
+        "description": "Your perfect every day pastry"
+      },
+      {
+        "name": "BACON CHEDDAR SCONE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE ICE CREAM SANDWICH",
+        "price": 8.95,
+        "description": ""
+      },
+      {
+        "name": "BUNNY FRENCH MACARON",
+        "price": 4.25,
+        "description": "Hand made bunny macaron"
+      },
+      {
+        "name": "BUTTER CROISSANT",
+        "price": 5.95,
+        "description": "World Class"
+      },
+      {
+        "name": "CAKE POP",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "CANNOLI",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CARAMEL APPLE CIDER CROISSANT",
+        "price": 8.75,
+        "description": "A flaky, caramel apple  and drizzled with a cider-infused glaze for a seasonal treat."
+      },
+      {
+        "name": "CHEESE DANISH",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CAKE (SLICE)",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CROISSANT",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      },
+      {
+        "name": "CINNAMON BUN",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "COFFEE CAKE SLICE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "CROISSANT GARLIC TWIST",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CROOKIE CROISSANT",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "CRUMBTOP BLUEBERRY MUFFIN",
+        "price": 4.99,
+        "description": ""
+      },
+      {
+        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Cannoli Chips & Dip",
+        "price": 14.95,
+        "description": "Special Order Impastata Ricotta - The Best Cannoli Cream"
+      },
+      {
+        "name": "EVERYTHING ROUND CROISSANT",
+        "price": 6.75,
+        "description": "Great for Sandwiches or Burgers....or on its own of course."
+      },
+      {
+        "name": "LEMON CAKE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "PISTACHIO CREAM CROISSANT",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "RASPBERRY CREAM CROISSANT",
+        "price": 9.25,
+        "description": ""
+      },
+      {
+        "name": "Round Croissant 3 Pack",
+        "price": 19.95,
+        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
+      },
+      {
+        "name": "ST. JOSEPH'S PASTRY",
+        "price": 7.25,
+        "description": ""
+      },
+      {
+        "name": "STRAWBERRY CREAM CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "BREAD": [
+      {
+        "name": "ANTHONY LOAF",
+        "price": 11.0,
+        "description": ""
+      },
+      {
+        "name": "BAGEL FRESH 4 PACK",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE HAMBURGER BUNS",
+        "price": 7.95,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE HOT DOG BUN",
+        "price": 11.95,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE LOAF",
+        "price": 16.95,
+        "description": ""
+      },
+      {
+        "name": "CIABATTA ROLLS",
+        "price": 2.0,
+        "description": ""
+      },
+      {
+        "name": "CINNAMON RAISIN BABKA",
+        "price": 7.95,
+        "description": ""
+      },
+      {
+        "name": "CLASSIC SOURDOUGH BREAD",
+        "price": 11.95,
+        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
+      },
+      {
+        "name": "CRANBERRY WALNUT SOURDOUGH",
+        "price": 12.95,
+        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
+      },
+      {
+        "name": "CROISSANT LOAF",
+        "price": 22.0,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING SOURDOUGH",
+        "price": 12.99,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING SOURDOUGH BAGEL",
+        "price": 2.95,
+        "description": ""
+      },
+      {
+        "name": "FRENCH BAGUETTE",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Focaccia Square",
+        "price": 6.0,
+        "description": ""
+      },
+      {
+        "name": "HALF CINNAMON RAISIN BABKA",
+        "price": 14.0,
+        "description": ""
+      },
+      {
+        "name": "HALF CROISSANT LOAF",
+        "price": 11.99,
+        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
+      },
+      {
+        "name": "IRISH SODA BREAD",
+        "price": 11.99,
+        "description": ""
+      },
+      {
+        "name": "ITALIAN FARFALE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "OLIVE SOURDOUGH",
+        "price": 12.95,
+        "description": ""
+      },
+      {
+        "name": "Prosciutto Baguette",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "SOURDOUGH BAGEL",
+        "price": 2.95,
+        "description": ""
+      },
+      {
+        "name": "SOURDOUGH PRETZEL",
+        "price": 6.75,
+        "description": ""
       }
     ]
   }
