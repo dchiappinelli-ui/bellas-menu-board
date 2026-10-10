@@ -1,51 +1,11 @@
 {
-  "synced_at": "2026-10-09T10:24:47.569063+00:00",
+  "synced_at": "2026-10-10T09:43:36.092580+00:00",
   "menu": {
-    "COFFEE": [
+    "SPECIALTY DRINKS": [
       {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 4.25,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "ICED COFFEE",
-        "price": 4.85,
-        "description": ""
+        "name": "BLENDED NITRO COFFEE",
+        "price": 6.95,
+        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
       },
       {
         "name": "LATTE",
@@ -53,14 +13,34 @@
         "description": ""
       },
       {
-        "name": "MACCHIATO",
-        "price": 4.65,
+        "name": "LEMONADE REFRESHER",
+        "price": 5.75,
+        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      },
+      {
+        "name": "MIXED BERRY SMOOTHIE",
+        "price": 9.85,
+        "description": "Berry smoothie"
+      },
+      {
+        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
+      },
+      {
+        "name": "STRAWBERRY ACAI REFRESHER",
+        "price": 5.75,
+        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
+      },
+      {
+        "name": "TROPICAL SUNRISE SMOOTHIE",
+        "price": 9.85,
         "description": ""
       },
       {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
+        "name": "WATERMELON REFRESHER",
+        "price": 5.75,
+        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
       }
     ],
     "ARTISAN SANDWICHES": [
@@ -148,48 +128,6 @@
         "name": "TURKEY CLUB",
         "price": 16.0,
         "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
-      }
-    ],
-    "SPECIALTY DRINKS": [
-      {
-        "name": "BLENDED NITRO COFFEE",
-        "price": 6.95,
-        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "LEMONADE REFRESHER",
-        "price": 5.75,
-        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
-      },
-      {
-        "name": "MIXED BERRY SMOOTHIE",
-        "price": 9.85,
-        "description": "Berry smoothie"
-      },
-      {
-        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
-      },
-      {
-        "name": "STRAWBERRY ACAI REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
-      },
-      {
-        "name": "TROPICAL SUNRISE SMOOTHIE",
-        "price": 9.85,
-        "description": ""
-      },
-      {
-        "name": "WATERMELON REFRESHER",
-        "price": 5.75,
-        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
       }
     ],
     "BREAD": [
@@ -306,7 +244,7 @@
     ],
     "GOURMET PASTRY": [
       {
-        "name": "$10 Bag Too Good",
+        "name": "$10 BAG TOO GOOD",
         "price": 10.0,
         "description": "TOO GOOD TO GO BAG OF CROISSANTS"
       },
@@ -343,7 +281,7 @@
       {
         "name": "BUTTER CROISSANT",
         "price": 5.95,
-        "description": "World Class"
+        "description": "WORLD CLASS"
       },
       {
         "name": "CAKE POP",
@@ -356,9 +294,14 @@
         "description": ""
       },
       {
+        "name": "CANNOLI CHIPS & DIP",
+        "price": 14.95,
+        "description": "SPECIAL ORDER IMPASTA RICOTTA - THE BEST CANNOLI CREAM"
+      },
+      {
         "name": "CARAMEL APPLE CIDER CROISSANT",
         "price": 8.75,
-        "description": "A flaky, caramel apple  and drizzled with a cider-infused glaze for a seasonal treat."
+        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
       },
       {
         "name": "CHEESE DANISH",
@@ -416,17 +359,12 @@
         "description": ""
       },
       {
-        "name": "Cannoli Chips & Dip",
-        "price": 14.95,
-        "description": "SPECIAL ORDER IMPASTA RICOTTA - THE BEST CANNOLI CREAM"
-      },
-      {
         "name": "EVERYTHING ROUND CROISSANT",
         "price": 6.75,
-        "description": "Great for Sandwiches or Burgers....or on its own of course."
+        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
       },
       {
-        "name": "LEMON CAKE",
+        "name": "LEMON CAKE SLICE",
         "price": 4.75,
         "description": ""
       },
@@ -462,6 +400,68 @@
       },
       {
         "name": "VANILLA FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "AMERICANO",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "CAPPUCCINO",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CORTADO",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "DRIP COFFEE",
+        "price": 4.25,
+        "description": ""
+      },
+      {
+        "name": "ESPRESSO",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "HOT CHOCOLATE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "ICED COFFEE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "LATTE",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "MACCHIATO",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "TEA",
         "price": 3.75,
         "description": ""
       }
