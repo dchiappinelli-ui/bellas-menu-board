@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-10-13T10:26:12.945868+00:00",
+  "synced_at": "2026-10-14T08:36:21.600813+00:00",
   "menu": {
     "SPECIALTY DRINKS": [
       {
@@ -130,115 +130,65 @@
         "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
       }
     ],
-    "BREAD": [
+    "COFFEE": [
       {
-        "name": "ANTHONY LOAF",
-        "price": 11.0,
+        "name": "AMERICANO",
+        "price": 4.5,
         "description": ""
       },
       {
-        "name": "BAGEL FRESH 4 PACK",
-        "price": 10.95,
+        "name": "CAPPUCCINO",
+        "price": 6.25,
         "description": ""
       },
       {
-        "name": "BRIOCHE HAMBURGER BUNS",
-        "price": 7.95,
+        "name": "CEREMONIAL MATCHA LATTE",
+        "price": 7.65,
         "description": ""
       },
       {
-        "name": "BRIOCHE HOT DOG BUN",
-        "price": 11.95,
+        "name": "CHAI TEA LATTE",
+        "price": 6.85,
         "description": ""
       },
       {
-        "name": "BRIOCHE LOAF",
-        "price": 16.95,
+        "name": "CORTADO",
+        "price": 5.95,
         "description": ""
       },
       {
-        "name": "CIABATTA ROLLS",
-        "price": 2.0,
+        "name": "DRIP COFFEE",
+        "price": 4.25,
         "description": ""
       },
       {
-        "name": "CINNAMON RAISIN BABKA",
-        "price": 7.95,
+        "name": "ESPRESSO",
+        "price": 3.85,
         "description": ""
       },
       {
-        "name": "CLASSIC SOURDOUGH BREAD",
-        "price": 11.95,
-        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
-      },
-      {
-        "name": "CRANBERRY WALNUT SOURDOUGH",
-        "price": 12.95,
-        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
-      },
-      {
-        "name": "CROISSANT LOAF",
-        "price": 22.0,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING SOURDOUGH",
-        "price": 12.99,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING SOURDOUGH BAGEL",
-        "price": 2.95,
-        "description": ""
-      },
-      {
-        "name": "FRENCH BAGUETTE",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Focaccia Square",
-        "price": 6.0,
-        "description": ""
-      },
-      {
-        "name": "HALF CINNAMON RAISIN BABKA",
-        "price": 14.0,
-        "description": ""
-      },
-      {
-        "name": "HALF CROISSANT LOAF",
-        "price": 11.99,
-        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
-      },
-      {
-        "name": "IRISH SODA BREAD",
-        "price": 11.99,
-        "description": ""
-      },
-      {
-        "name": "ITALIAN FARFALE",
+        "name": "HOT CHOCOLATE",
         "price": 4.75,
         "description": ""
       },
       {
-        "name": "OLIVE SOURDOUGH",
-        "price": 12.95,
+        "name": "ICED COFFEE",
+        "price": 4.85,
         "description": ""
       },
       {
-        "name": "Prosciutto Baguette",
-        "price": 6.99,
+        "name": "LATTE",
+        "price": 6.5,
         "description": ""
       },
       {
-        "name": "SOURDOUGH BAGEL",
-        "price": 2.95,
+        "name": "MACCHIATO",
+        "price": 4.65,
         "description": ""
       },
       {
-        "name": "SOURDOUGH PRETZEL",
-        "price": 6.75,
+        "name": "TEA",
+        "price": 3.75,
         "description": ""
       }
     ],
@@ -404,65 +354,115 @@
         "description": ""
       }
     ],
-    "COFFEE": [
+    "BREAD": [
       {
-        "name": "AMERICANO",
-        "price": 4.5,
+        "name": "ANTHONY LOAF",
+        "price": 11.0,
         "description": ""
       },
       {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
+        "name": "BAGEL FRESH 4 PACK",
+        "price": 10.95,
         "description": ""
       },
       {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
+        "name": "BRIOCHE HAMBURGER BUNS",
+        "price": 7.95,
         "description": ""
       },
       {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
+        "name": "BRIOCHE HOT DOG BUN",
+        "price": 11.95,
         "description": ""
       },
       {
-        "name": "CORTADO",
-        "price": 5.95,
+        "name": "BRIOCHE LOAF",
+        "price": 16.95,
         "description": ""
       },
       {
-        "name": "DRIP COFFEE",
-        "price": 4.25,
+        "name": "CIABATTA ROLLS",
+        "price": 2.0,
         "description": ""
       },
       {
-        "name": "ESPRESSO",
-        "price": 3.85,
+        "name": "CINNAMON RAISIN BABKA",
+        "price": 7.95,
         "description": ""
       },
       {
-        "name": "HOT CHOCOLATE",
+        "name": "CLASSIC SOURDOUGH BREAD",
+        "price": 11.95,
+        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
+      },
+      {
+        "name": "CRANBERRY WALNUT SOURDOUGH",
+        "price": 12.95,
+        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
+      },
+      {
+        "name": "CROISSANT LOAF",
+        "price": 22.0,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING SOURDOUGH",
+        "price": 12.99,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING SOURDOUGH BAGEL",
+        "price": 2.95,
+        "description": ""
+      },
+      {
+        "name": "FRENCH BAGUETTE",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Focaccia Square",
+        "price": 6.0,
+        "description": ""
+      },
+      {
+        "name": "HALF CINNAMON RAISIN BABKA",
+        "price": 14.0,
+        "description": ""
+      },
+      {
+        "name": "HALF CROISSANT LOAF",
+        "price": 11.99,
+        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
+      },
+      {
+        "name": "IRISH SODA BREAD",
+        "price": 11.99,
+        "description": ""
+      },
+      {
+        "name": "ITALIAN FARFALE",
         "price": 4.75,
         "description": ""
       },
       {
-        "name": "ICED COFFEE",
-        "price": 4.85,
+        "name": "OLIVE SOURDOUGH",
+        "price": 12.95,
         "description": ""
       },
       {
-        "name": "LATTE",
-        "price": 6.5,
+        "name": "Prosciutto Baguette",
+        "price": 6.99,
         "description": ""
       },
       {
-        "name": "MACCHIATO",
-        "price": 4.65,
+        "name": "SOURDOUGH BAGEL",
+        "price": 2.95,
         "description": ""
       },
       {
-        "name": "TEA",
-        "price": 3.75,
+        "name": "SOURDOUGH PRETZEL",
+        "price": 6.75,
         "description": ""
       }
     ]
