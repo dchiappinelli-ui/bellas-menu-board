@@ -155,6 +155,84 @@
     line-height:1.15; color:var(--cream); max-width:100%;
   }
   .promo-slide h2 em{ color:var(--gold); font-style:normal; }
+  /* expressive typography: mixed sizes/styles to make one word the hero */
+  .promo-slide.expressive{ padding:28px 24px; }
+  /* review + social slide */
+  .r-stars{ display:flex; gap:6px; margin:6px 0 4px; }
+  .r-star{ filter:drop-shadow(0 2px 6px rgba(228,200,102,0.35)); }
+  .s-icons{ display:flex; gap:14px; margin-top:12px; }
+  .s-ico{
+    width:56px; height:56px; border:2px solid var(--gold-soft); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:var(--gold-soft);
+  }
+  .s-handle{
+    margin-top:16px; font-family:'Fraunces', serif; font-weight:700;
+    font-size:min(44px, 2.3vw); letter-spacing:0.5px; color:var(--cream);
+  }
+  /* quote slide */
+  .q-mark{
+    font-family:'Fraunces', serif; font-weight:800; font-size:130px; line-height:0.7;
+    color:var(--gold); height:56px; margin-left:-4px;
+  }
+  .q-quote{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:600;
+    font-size:min(64px, 3.3vw); line-height:1.08; color:var(--cream);
+  }
+  .q-quote em{ font-style:italic; color:var(--gold); }
+  .q-attrib{
+    margin-top:18px; font-family:'Inter', sans-serif; font-weight:800; font-size:17px;
+    letter-spacing:4px; text-transform:uppercase; color:var(--gold-soft);
+  }
+  .q-rule{ width:70px; height:3px; background:var(--gold); margin:30px 0 22px; }
+  .q-watch{
+    font-family:'Fraunces', serif; font-weight:500; font-size:25px; line-height:1.25;
+    color:var(--cream); max-width:460px;
+  }
+  .q-on{ margin-top:18px; display:flex; align-items:center; gap:16px; }
+  .q-play{ flex-shrink:0; filter:drop-shadow(0 0 14px rgba(229,9,20,0.55)); }
+  .q-stream{
+    font-family:'Inter', sans-serif; font-weight:700; font-size:12px; letter-spacing:3px;
+    text-transform:uppercase; color:var(--muted); margin-bottom:2px;
+  }
+  .q-net{
+    font-family:'Inter', sans-serif; font-weight:900; font-size:30px; letter-spacing:6px;
+    text-transform:uppercase; color:#E50914;
+  }
+  .q-ep{
+    margin-top:8px; font-family:'Caveat', cursive; font-weight:600; font-size:36px;
+    color:var(--gold-soft);
+  }
+  .x-script{
+    font-family:'Caveat', cursive; font-weight:600; font-size:54px; line-height:1;
+    color:var(--gold-soft); transform:rotate(-3deg); transform-origin:left bottom;
+  }
+  .x-label{
+    font-family:'Inter', sans-serif; font-weight:800; font-size:21px; line-height:1;
+    letter-spacing:6px; text-transform:uppercase; color:var(--cream); margin:14px 0 6px 2px;
+  }
+  .x-big{
+    font-family:'Fraunces', serif; font-weight:700; font-size:min(116px, 6vw); line-height:0.95;
+    letter-spacing:-1px; color:var(--cream); margin-left:-3px;
+  }
+  .x-big.x-italic{ font-style:italic; font-weight:600; color:var(--gold); padding-left:56px; }
+  /* red / white / blue accent rule above the veteran line */
+  .x-rule{ display:flex; width:96px; height:4px; margin:26px 0 16px; }
+  .x-rule i{ flex:1; display:block; }
+  .x-rule i:nth-child(1){ background:#C8323C; }
+  .x-rule i:nth-child(2){ background:var(--cream); }
+  .x-rule i:nth-child(3){ background:#4A5FB0; }
+  .x-vetrow{ display:flex; align-items:center; gap:14px; }
+  .x-flag{ flex-shrink:0; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.45)); }
+  .x-vet{
+    font-family:'Inter', sans-serif; font-weight:600; font-size:17px; line-height:1.4;
+    color:var(--muted); max-width:380px; letter-spacing:0.3px;
+  }
+  .x-stamp{
+    margin-top:26px; display:inline-block; transform:rotate(-3deg);
+    background:var(--gold); color:#1a1408; padding:10px 24px; border-radius:6px;
+    font-family:'Fraunces', serif; font-weight:800; font-size:24px; letter-spacing:3px;
+    text-transform:uppercase;
+  }
   .promo-slide p.sub{
     margin-top:14px; font-size:13.5px; color:var(--muted); line-height:1.5; max-width:100%;
   }
@@ -317,30 +395,53 @@ const NEW_BADGE_PANELS = new Set([2]);
 
 const PROMOS = [
   {
-    tag: 'now through 10am',
-    title: 'Double points on <em>every</em> Slow Hours order',
-    sub: 'Earn 2x loyalty points on anything ordered between 8&nbsp;&ndash;&nbsp;10am. 10 points gets you a free coffee, any size.',
-    badge: "Ask about Bella's Rewards",
+    expressive:
+      '<div class="x-script">You\'ve found</div>'
+      + '<div class="x-label">the best local</div>'
+      + '<div class="x-big">Sourdough</div>'
+      + '<div class="x-big x-italic">Bakery</div>'
+      + '<div class="x-rule"><i></i><i></i><i></i></div>'
+      + '<div class="x-vetrow">'
+      +   '<svg class="x-flag" viewBox="0 0 36 36" width="44" height="44" aria-hidden="true">'
+      +     '<circle cx="18" cy="18" r="16.5" fill="#3C3B6E" stroke="#C8323C" stroke-width="2.4"/>'
+      +     '<circle cx="18" cy="18" r="13.2" fill="none" stroke="#F3ECDF" stroke-width="0.8"/>'
+      +     '<polygon fill="#F3ECDF" points="18,8 20.35,14.76 27.51,14.91 21.8,19.24 23.88,26.09 18,22 12.12,26.09 14.2,19.24 8.49,14.91 15.65,14.76"/>'
+      +   '</svg>'
+      +   '<div class="x-vet">Veteran founded and professionally operated</div>'
+      + '</div>'
+      + '<div class="x-stamp">Freshly Baked</div>',
   },
   {
-    tag: 'baked fresh daily',
-    title: 'Everything is made <em>in house</em>',
-    sub: 'Our croissants, cookies, macarons, and sourdough are all hand-made right here in Mount Kisco.',
-    badge: 'Come see the kitchen',
+    expressive:
+      '<div class="q-mark">&ldquo;</div>'
+      + '<div class="q-quote">One of the <em>Best Croissants</em> I\'ve ever had</div>'
+      + '<div class="q-attrib">&mdash; Martha Stewart</div>'
+      + '<div class="q-rule"></div>'
+      + '<div class="q-watch">Catch David &amp; Martha making croissants together</div>'
+      + '<div class="q-on">'
+      +   '<svg class="q-play" viewBox="0 0 48 48" width="56" height="56" aria-hidden="true">'
+      +     '<circle cx="24" cy="24" r="22" fill="#E50914"/>'
+      +     '<circle cx="24" cy="24" r="22" fill="none" stroke="#F3ECDF" stroke-width="1.5" opacity="0.6"/>'
+      +     '<polygon points="19,14 19,34 35,24" fill="#F3ECDF"/>'
+      +   '</svg>'
+      +   '<div class="q-ontext"><div class="q-stream">Now streaming on</div><div class="q-net">Netflix</div></div>'
+      + '</div>'
+      + '<div class="q-ep">Martha Cooks &middot; Episode 16</div>',
   },
   {
-    tag: 'hosting soon?',
-    title: 'Let us cater your <em>next</em> brunch gathering',
-    sub: "From pastries and sandwich platters to coffee service, ask a team member about catering for your next brunch, shower, or celebration.",
-    badge: 'Ask in store',
-  },
-  {
-    tag: 'follow along',
-    title: 'Follow us on <em>TikTok</em> &amp; <em>Instagram</em>',
-    sub: 'See what\'s coming out of the kitchen and hear about specials first.'
-      + '<div class="social-row"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.6 3c.4 2.7 2.1 4.5 4.9 4.8v3.1c-1.8 0-3.5-.6-4.9-1.6v6.4c0 3.5-2.9 6.3-6.4 6.3S3.8 19.2 3.8 15.7s2.9-6.3 6.4-6.3c.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.3-1.4 3.3-3.2V3h3.1z"/></svg> TikTok: @bellasbakeshop</div>'
-      + '<div class="social-row"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram: @bellasbakeshopny</div>',
-    badge: 'Give us a follow',
+    expressive:
+      '<div class="x-script">Love what we do?</div>'
+      + '<div class="r-stars">' + '<svg class="r-star" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><polygon fill="#E4C866" points="12,1 14.59,8.44 22.46,8.6 16.18,13.36 18.47,20.9 12,16.4 5.53,20.9 7.82,13.36 1.54,8.6 9.41,8.44"/></svg>'.repeat(5) + '</div>'
+      + '<div class="x-big">Review us</div>'
+      + '<div class="x-big x-italic">on Google</div>'
+      + '<div class="q-rule"></div>'
+      + '<div class="x-label">follow along</div>'
+      + '<div class="s-icons">'
+      +   '<span class="s-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></span>'
+      +   '<span class="s-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M14 8h-2c-.9 0-1.5.5-1.5 1.5V12H14l-.4 3h-3.1v7H7.5v-7H5.5v-3h2V9.5C7.5 6.8 9 5.5 11.3 5.5H14V8z" transform="translate(1.5 -1.5)"/></svg></span>'
+      +   '<span class="s-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.7 2.1 4.5 4.9 4.8v3.1c-1.8 0-3.5-.6-4.9-1.6v6.4c0 3.5-2.9 6.3-6.4 6.3S3.8 19.2 3.8 15.7s2.9-6.3 6.4-6.3c.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.3-1.4 3.3-3.2V3h3.1z"/></svg></span>'
+      + '</div>'
+      + '<div class="s-handle">@bellasbakeshop</div>',
   },
 ];
 
@@ -429,9 +530,9 @@ const slides = slidePlan.map((plan, i) => {
     mediaStage.appendChild(el);
     return { el, dot, video, duration: 13000, isVideo: true };
   } else {
-    el.className = 'media-slide promo-slide' + (i === 0 ? ' active' : '');
     const p = plan.promo;
-    el.innerHTML = `
+    el.className = 'media-slide promo-slide' + (p.expressive ? ' expressive' : '') + (i === 0 ? ' active' : '');
+    el.innerHTML = p.expressive ? p.expressive : `
       <div class="tag">${p.tag}</div>
       <h2>${p.title}</h2>
       <p class="sub">${p.sub}</p>
