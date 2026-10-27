@@ -1,178 +1,6 @@
 {
-  "synced_at": "2026-10-26T08:46:58.742238+00:00",
+  "synced_at": "2026-10-27T08:52:50.011924+00:00",
   "menu": {
-    "GOURMET PASTRY": [
-      {
-        "name": "$10 BAG TOO GOOD",
-        "price": 10.0,
-        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
-      },
-      {
-        "name": "ALMOND MAPLE CROISSANT",
-        "price": 6.95,
-        "description": "Chef's Favorite"
-      },
-      {
-        "name": "APPLE CINNAMON PULL APART",
-        "price": 5.95,
-        "description": "YOUR PERFECT EVERY DAY PASTRY"
-      },
-      {
-        "name": "APPLE DANISH",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "BACON CHEDDAR SCONE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE ICE CREAM SANDWICH",
-        "price": 8.95,
-        "description": ""
-      },
-      {
-        "name": "BUNNY FRENCH MACARON",
-        "price": 4.25,
-        "description": "Hand made bunny macaron"
-      },
-      {
-        "name": "BUTTER CROISSANT",
-        "price": 5.95,
-        "description": "WORLD CLASS"
-      },
-      {
-        "name": "CAKE POP",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "CANNOLI",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CANNOLI CHIPS & DIP",
-        "price": 14.95,
-        "description": "SPECIAL ORDER IMPASTA RICOTTA - THE BEST CANNOLI CREAM"
-      },
-      {
-        "name": "CARAMEL APPLE CIDER CROISSANT",
-        "price": 8.75,
-        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
-      },
-      {
-        "name": "CHEESE DANISH",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CAKE (SLICE)",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CROISSANT",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      },
-      {
-        "name": "CINNAMON BUN",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "COFFEE CAKE SLICE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "CROISSANT GARLIC TWIST",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CROOKIE CROISSANT",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "CRUMBTOP BLUEBERRY MUFFIN",
-        "price": 4.99,
-        "description": ""
-      },
-      {
-        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING ROUND CROISSANT",
-        "price": 6.75,
-        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
-      },
-      {
-        "name": "LEMON CAKE SLICE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "PEACH COBBLER",
-        "price": 5.75,
-        "description": ""
-      },
-      {
-        "name": "PISTACHIO CREAM CROISSANT",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "RASPBERRY CREAM CROISSANT",
-        "price": 9.25,
-        "description": ""
-      },
-      {
-        "name": "Round Croissant 3 Pack",
-        "price": 19.95,
-        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
-      },
-      {
-        "name": "SAUSAGE EGG & CHEESE BRIOCHE BUN",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "ST. JOSEPH'S PASTRY",
-        "price": 7.25,
-        "description": ""
-      },
-      {
-        "name": "STRAWBERRY CREAM CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "BREAD": [
       {
         "name": "ANTHONY LOAF",
@@ -479,6 +307,178 @@
         "name": "WATERMELON REFRESHER",
         "price": 5.75,
         "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      }
+    ],
+    "GOURMET PASTRY": [
+      {
+        "name": "$10 BAG TOO GOOD",
+        "price": 10.0,
+        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
+      },
+      {
+        "name": "ALMOND MAPLE CROISSANT",
+        "price": 6.95,
+        "description": "Chef's Favorite"
+      },
+      {
+        "name": "APPLE CINNAMON PULL APART",
+        "price": 5.95,
+        "description": "YOUR PERFECT EVERY DAY PASTRY"
+      },
+      {
+        "name": "APPLE DANISH",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "BACON CHEDDAR SCONE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "BRIOCHE ICE CREAM SANDWICH",
+        "price": 8.95,
+        "description": ""
+      },
+      {
+        "name": "BUNNY FRENCH MACARON",
+        "price": 4.25,
+        "description": "Hand made bunny macaron"
+      },
+      {
+        "name": "BUTTER CROISSANT",
+        "price": 5.95,
+        "description": "WORLD CLASS"
+      },
+      {
+        "name": "CAKE POP",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "CANNOLI",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CANNOLI CHIPS & DIP",
+        "price": 14.95,
+        "description": "SPECIAL ORDER IMPASTA RICOTTA - THE BEST CANNOLI CREAM"
+      },
+      {
+        "name": "CARAMEL APPLE CIDER CROISSANT",
+        "price": 8.75,
+        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
+      },
+      {
+        "name": "CHEESE DANISH",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CAKE (SLICE)",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CROISSANT",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "CHOCOLATE FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
+      },
+      {
+        "name": "CINNAMON BUN",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "COFFEE CAKE SLICE",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "CROISSANT GARLIC TWIST",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "CROOKIE CROISSANT",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "CRUMBTOP BLUEBERRY MUFFIN",
+        "price": 4.99,
+        "description": ""
+      },
+      {
+        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "EVERYTHING ROUND CROISSANT",
+        "price": 6.75,
+        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
+      },
+      {
+        "name": "LEMON CAKE SLICE",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "PEACH COBBLER",
+        "price": 5.75,
+        "description": ""
+      },
+      {
+        "name": "PISTACHIO CREAM CROISSANT",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "RASPBERRY CREAM CROISSANT",
+        "price": 9.25,
+        "description": ""
+      },
+      {
+        "name": "Round Croissant 3 Pack",
+        "price": 19.95,
+        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
+      },
+      {
+        "name": "SAUSAGE EGG & CHEESE BRIOCHE BUN",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "ST. JOSEPH'S PASTRY",
+        "price": 7.25,
+        "description": ""
+      },
+      {
+        "name": "STRAWBERRY CREAM CROISSANT",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA CUPCAKE",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "VANILLA FRENCH CRULLER",
+        "price": 3.75,
+        "description": ""
       }
     ]
   }
