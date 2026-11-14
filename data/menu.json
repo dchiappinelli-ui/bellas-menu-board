@@ -239,11 +239,6 @@
         "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
       },
       {
-        "name": "Build-A-Sandwich",
-        "price": 4.95,
-        "description": "SOURDOUGH BAGEL / CROISSANT OR CLASSIC SOURDOUGH BREAD, ADD PROTEIN, CREAM CHEESE, BUTTER, AVOCADO, EGG, BACON, SWISS, AMERICAN, TOMATO, BASIL, ARUGULA"
-      },
-      {
         "name": "Build-A-Sourdough Bagel",
         "price": 3.25,
         "description": "SOURDOUGH BAGEL / CROISSANT OR CLASSIC SOURDOUGH BREAD, ADD PROTEIN, CREAM CHEESE, BUTTER, AVOCADO, EGG, BACON, SWISS, AMERICAN, TOMATO, BASIL, ARUGULA"

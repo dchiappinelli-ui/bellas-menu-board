@@ -124,7 +124,7 @@ def build_menu(objects_by_id, category_name_by_id):
 
         for cat in cats:
             cfg = CATEGORY_CONFIG[cat]
-            if name in cfg["exclude"]:
+            if name.upper() in {x.upper() for x in cfg["exclude"]}:
                 continue
             if price > cfg["ceiling"]:
                 continue
