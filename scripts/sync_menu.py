@@ -96,7 +96,9 @@ def build_menu(objects_by_id, category_name_by_id):
     for obj in objects_by_id.values():
         if obj.get("type") != "ITEM" or obj.get("is_deleted"):
             continue
-        cats = item_category_names(obj, category_name_by_id) & target_cats
+        # Match category names ignoring case/extra spaces — Square categories
+        # were renamed from ALL CAPS to Title Case and the exact match broke.
+        cats = {n.strip().upper() for n in item_category_names(obj, category_name_by_id)} & target_cats
         if not cats:
             continue
 
