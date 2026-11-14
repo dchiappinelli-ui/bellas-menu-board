@@ -1,448 +1,65 @@
 {
-  "synced_at": "2026-11-12T10:55:51.224558+00:00",
+  "synced_at": "2026-11-14T17:51:30.318141+00:00",
   "menu": {
-    "COFFEE": [
-      {
-        "name": "AMERICANO",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "CAPPUCCINO",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "CEREMONIAL MATCHA LATTE",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "CHAI TEA LATTE",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CORTADO",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "DRIP COFFEE",
-        "price": 4.25,
-        "description": ""
-      },
-      {
-        "name": "ESPRESSO",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "HOT CHOCOLATE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "ICED COFFEE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "MACCHIATO",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "TEA",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
-    "ARTISAN SANDWICHES": [
-      {
-        "name": "AVOCADO TOAST",
-        "price": 12.95,
-        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
-      },
-      {
-        "name": "BELLA'S RICOTTA BRUSCHETTA",
-        "price": 14.0,
-        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED VEGETABLES"
-      },
-      {
-        "name": "BELLAS CHICKEN BTB PANINI",
-        "price": 16.95,
-        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL PESTO, BALSAMIC MAYO ON FOCACCIA"
-      },
-      {
-        "name": "BRUNCH BLISS",
-        "price": 16.95,
-        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
-      },
-      {
-        "name": "BUILD-A-SOURDOUGH BAGEL",
-        "price": 3.25,
-        "description": "SOURDOUGH BAGEL / CROISSANT OR CLASSIC SOURDOUGH BREAD, ADD PROTEIN, CREAM CHEESE, BUTTER, AVOCADO, EGG, BACON, SWISS, AMERICAN, TOMATO, BASIL, ARUGULA"
-      },
-      {
-        "name": "CANNOLI CROISSANT",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "CAPRESE CROISSANT",
-        "price": 13.25,
-        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
-      },
-      {
-        "name": "CROBEC",
-        "price": 12.95,
-        "description": "CROISSANT BACON EGG & CHEESE"
-      },
-      {
-        "name": "HAM & CHEESE DELUX",
-        "price": 14.95,
-        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 11.75,
-        "description": ""
-      },
-      {
-        "name": "HAM AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.99,
-        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "MEDITERRANEAN BLISS",
-        "price": 19.65,
-        "description": "BURRATA, PROSCIUTTO, ARUGULA, PESTO, BALSAMIC GLAZE ON TOASTED SOURDOUGH"
-      },
-      {
-        "name": "PESTO GRILLED CHEESE",
-        "price": 11.95,
-        "description": ""
-      },
-      {
-        "name": "SAUSAGE EGG & CHEESE BRIOCHE BUN",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "THE CRAN-WALNUT CHICKEN SOURDOUGH",
-        "price": 13.45,
-        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD"
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH (GRAB AND GO)",
-        "price": 11.75,
-        "description": ""
-      },
-      {
-        "name": "TURKEY AND SWISS SOURDOUGH SANDWICH",
-        "price": 12.95,
-        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
-      },
-      {
-        "name": "TURKEY CLUB",
-        "price": 16.0,
-        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
-      }
-    ],
-    "GOURMET PASTRY": [
-      {
-        "name": "$10 BAG TOO GOOD",
-        "price": 10.0,
-        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
-      },
-      {
-        "name": "ALMOND MAPLE CROISSANT",
-        "price": 6.95,
-        "description": "Chef's Favorite"
-      },
-      {
-        "name": "APPLE CINNAMON PULL APART",
-        "price": 5.95,
-        "description": "YOUR PERFECT EVERY DAY PASTRY"
-      },
-      {
-        "name": "APPLE DANISH",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "BACON CHEDDAR SCONE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "BANANA BREAD SLICE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "BRIOCHE ICE CREAM SANDWICH",
-        "price": 8.95,
-        "description": ""
-      },
-      {
-        "name": "BUNNY FRENCH MACARON",
-        "price": 4.25,
-        "description": "Hand made bunny macaron"
-      },
-      {
-        "name": "BUTTER CROISSANT",
-        "price": 5.95,
-        "description": "WORLD CLASS"
-      },
-      {
-        "name": "CAKE POP",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "CANNOLI",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CARAMEL APPLE CIDER CROISSANT",
-        "price": 8.75,
-        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
-      },
-      {
-        "name": "CHEESE DANISH",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CAKE (SLICE)",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CROISSANT",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "CHOCOLATE FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      },
-      {
-        "name": "CINNAMON BUN",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "COFFEE CAKE SLICE",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "CROISSANT GARLIC TWIST",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "CROOKIE CROISSANT",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "CRUMBTOP BLUEBERRY MUFFIN",
-        "price": 4.99,
-        "description": ""
-      },
-      {
-        "name": "CR\u00c8ME BR\u00dbL\u00c9E CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "EVERYTHING ROUND CROISSANT",
-        "price": 6.75,
-        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
-      },
-      {
-        "name": "LEMON CAKE SLICE",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "PEACH COBBLER",
-        "price": 5.75,
-        "description": ""
-      },
-      {
-        "name": "PISTACHIO CREAM CROISSANT",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "PUMPKIN SPICE MORNING BUN",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Pumpkin Pie Slice",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "RASPBERRY CREAM CROISSANT",
-        "price": 9.25,
-        "description": ""
-      },
-      {
-        "name": "Round Croissant 3 Pack",
-        "price": 19.95,
-        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
-      },
-      {
-        "name": "SAUSAGE EGG & CHEESE BRIOCHE BUN",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "ST. JOSEPH'S PASTRY",
-        "price": 7.25,
-        "description": ""
-      },
-      {
-        "name": "STRAWBERRY CREAM CROISSANT",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA CUPCAKE",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "VANILLA FRENCH CRULLER",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
-    "SPECIALTY DRINKS": [
-      {
-        "name": "BLENDED NITRO COFFEE",
-        "price": 6.95,
-        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
-      },
-      {
-        "name": "LATTE",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "LEMONADE REFRESHER",
-        "price": 5.75,
-        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
-      },
-      {
-        "name": "MIXED BERRY SMOOTHIE",
-        "price": 9.85,
-        "description": "Berry smoothie"
-      },
-      {
-        "name": "STAR FRUIT / PASSION FRUIT / MANGO REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
-      },
-      {
-        "name": "STRAWBERRY ACAI REFRESHER",
-        "price": 5.75,
-        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
-      },
-      {
-        "name": "TROPICAL SUNRISE SMOOTHIE",
-        "price": 9.85,
-        "description": ""
-      },
-      {
-        "name": "WATERMELON REFRESHER",
-        "price": 5.75,
-        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
-      }
-    ],
     "BREAD": [
       {
-        "name": "ANTHONY LOAF",
+        "name": "Anthony Loaf",
         "price": 11.0,
         "description": ""
       },
       {
-        "name": "BAGEL FRESH 4 PACK",
+        "name": "Bagel Fresh 4 Pack",
         "price": 10.95,
         "description": ""
       },
       {
-        "name": "BRIOCHE HAMBURGER BUNS",
+        "name": "Brioche Hamburger Buns",
         "price": 7.95,
         "description": ""
       },
       {
-        "name": "BRIOCHE HOT DOG BUN",
+        "name": "Brioche Hot Dog Bun",
         "price": 11.95,
         "description": ""
       },
       {
-        "name": "BRIOCHE LOAF",
+        "name": "Brioche Loaf",
         "price": 16.95,
         "description": ""
       },
       {
-        "name": "CIABATTA ROLLS",
+        "name": "Ciabatta Rolls",
         "price": 2.0,
         "description": ""
       },
       {
-        "name": "CINNAMON RAISIN BABKA",
+        "name": "Cinnamon Raisin Babka",
         "price": 7.95,
         "description": ""
       },
       {
-        "name": "CLASSIC SOURDOUGH BREAD",
+        "name": "Classic Sourdough Bread",
         "price": 11.95,
         "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
       },
       {
-        "name": "CRANBERRY WALNUT SOURDOUGH",
+        "name": "Cranberry Walnut Sourdough",
         "price": 12.95,
         "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
       },
       {
-        "name": "CROISSANT LOAF",
+        "name": "Croissant Loaf",
         "price": 22.0,
         "description": ""
       },
       {
-        "name": "EVERYTHING SOURDOUGH",
+        "name": "Everything Sourdough",
         "price": 12.99,
         "description": ""
       },
       {
-        "name": "EVERYTHING SOURDOUGH BAGEL",
+        "name": "Everything Sourdough Bagel",
         "price": 2.95,
-        "description": ""
-      },
-      {
-        "name": "FRENCH BAGUETTE",
-        "price": 6.95,
         "description": ""
       },
       {
@@ -451,27 +68,32 @@
         "description": ""
       },
       {
-        "name": "HALF CINNAMON RAISIN BABKA",
+        "name": "French Baguette",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Half Cinnamon Raisin Babka",
         "price": 14.0,
         "description": ""
       },
       {
-        "name": "HALF CROISSANT LOAF",
+        "name": "Half Croissant Loaf",
         "price": 11.99,
         "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
       },
       {
-        "name": "IRISH SODA BREAD",
+        "name": "Irish Soda Bread",
         "price": 11.99,
         "description": ""
       },
       {
-        "name": "ITALIAN FARFALE",
+        "name": "Italian Farfale",
         "price": 4.75,
         "description": ""
       },
       {
-        "name": "OLIVE SOURDOUGH",
+        "name": "Olive Sourdough",
         "price": 12.95,
         "description": ""
       },
@@ -481,13 +103,401 @@
         "description": ""
       },
       {
-        "name": "SOURDOUGH BAGEL",
+        "name": "Sourdough Bagel",
         "price": 2.95,
         "description": ""
       },
       {
-        "name": "SOURDOUGH PRETZEL",
+        "name": "Sourdough Pretzel",
         "price": 6.75,
+        "description": ""
+      }
+    ],
+    "COFFEE": [
+      {
+        "name": "Americano",
+        "price": 4.5,
+        "description": ""
+      },
+      {
+        "name": "Cappuccino",
+        "price": 6.25,
+        "description": ""
+      },
+      {
+        "name": "Ceremonial Matcha Latte",
+        "price": 7.65,
+        "description": ""
+      },
+      {
+        "name": "Chai Tea Latte",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "Cortado",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "Drip Coffee",
+        "price": 4.25,
+        "description": ""
+      },
+      {
+        "name": "Espresso",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "Hot Chocolate",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Iced Coffee",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Latte",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "Macchiato",
+        "price": 4.65,
+        "description": ""
+      },
+      {
+        "name": "Tea",
+        "price": 3.75,
+        "description": ""
+      }
+    ],
+    "SPECIALTY DRINKS": [
+      {
+        "name": "Blended Nitro Coffee",
+        "price": 6.95,
+        "description": "Blended Nitro Coffee offers a smooth flavor profile complemented by a rich aroma. Perfectly crafted for a premium coffee experience."
+      },
+      {
+        "name": "Latte",
+        "price": 6.5,
+        "description": ""
+      },
+      {
+        "name": "Lemonade Refresher",
+        "price": 5.75,
+        "description": "A refreshing blend of smart fruit lemonade, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      },
+      {
+        "name": "Mixed Berry Smoothie",
+        "price": 9.85,
+        "description": "Berry smoothie"
+      },
+      {
+        "name": "Star Fruit / Passion Fruit / Mango Refresher",
+        "price": 5.75,
+        "description": "A vibrant blend of star fruit, passion fruit, and mango, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its tropical, slightly tangy notes."
+      },
+      {
+        "name": "Strawberry Acai Refresher",
+        "price": 5.75,
+        "description": "A vibrant blend of ripe strawberries and exotic acai berries, creating a refreshing and revitalizing beverage that tantalizes the taste buds with its fruity and slightly tangy notes."
+      },
+      {
+        "name": "Tropical Sunrise Smoothie",
+        "price": 9.85,
+        "description": ""
+      },
+      {
+        "name": "Watermelon Refresher",
+        "price": 5.75,
+        "description": "A revitalizing blend of smart fruit watermelon, served chilled to quench your thirst with a burst of natural sweetness and hydration."
+      }
+    ],
+    "ARTISAN SANDWICHES": [
+      {
+        "name": "Avocado Toast",
+        "price": 12.95,
+        "description": "AVOCADO TOAST ON HOUSE SOURDOUGH, ADD PROTEIN"
+      },
+      {
+        "name": "Bella's Ricotta Bruschetta",
+        "price": 14.0,
+        "description": "SOURDOUGH PREMIUM IMPASTATA RICOTTA, OLIVE OIL, HOUSE SEASONING, SEA SALT, ROASTED VEGETABLES"
+      },
+      {
+        "name": "Bellas Chicken BTB Panini",
+        "price": 16.95,
+        "description": "GRILLED CHICKEN, BURRATA, TOMATO, BASIL PESTO, BALSAMIC MAYO ON FOCACCIA"
+      },
+      {
+        "name": "Brunch Bliss",
+        "price": 16.95,
+        "description": "SMOKED SALMON, AVOCADO, CREAM CHEESE ON A ROUND EVERYTHING SEEDED CROISSANT"
+      },
+      {
+        "name": "Build-A-Sandwich",
+        "price": 4.95,
+        "description": "SOURDOUGH BAGEL / CROISSANT OR CLASSIC SOURDOUGH BREAD, ADD PROTEIN, CREAM CHEESE, BUTTER, AVOCADO, EGG, BACON, SWISS, AMERICAN, TOMATO, BASIL, ARUGULA"
+      },
+      {
+        "name": "Build-A-Sourdough Bagel",
+        "price": 3.25,
+        "description": "SOURDOUGH BAGEL / CROISSANT OR CLASSIC SOURDOUGH BREAD, ADD PROTEIN, CREAM CHEESE, BUTTER, AVOCADO, EGG, BACON, SWISS, AMERICAN, TOMATO, BASIL, ARUGULA"
+      },
+      {
+        "name": "Cannoli Croissant",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "Caprese Croissant",
+        "price": 13.25,
+        "description": "CROISSANT, TOMATO, BASIL, BURRATA, BALSAMIC GLAZE, EVOO"
+      },
+      {
+        "name": "Crobec",
+        "price": 12.95,
+        "description": "CROISSANT BACON EGG & CHEESE"
+      },
+      {
+        "name": "Ham & Cheese Delux",
+        "price": 14.95,
+        "description": "HONEY HAM, SWISS, ARUGULA, TOMATO, CROISSANT"
+      },
+      {
+        "name": "Ham and Swiss Sourdough (Grab and Go)",
+        "price": 11.75,
+        "description": ""
+      },
+      {
+        "name": "Ham and Swiss Sourdough Sandwich",
+        "price": 12.99,
+        "description": "The Ham and Swiss Sourdough Sandwich features a savory combination of premium ham and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      },
+      {
+        "name": "Mediterranean Bliss",
+        "price": 19.65,
+        "description": "BURRATA, PROSCIUTTO, ARUGULA, PESTO, BALSAMIC GLAZE ON TOASTED SOURDOUGH"
+      },
+      {
+        "name": "Pesto Grilled Cheese",
+        "price": 11.95,
+        "description": ""
+      },
+      {
+        "name": "Sausage Egg & Cheese Brioche Bun",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "The Cran-Walnut Chicken Sourdough",
+        "price": 13.45,
+        "description": "HOUSE-MADE CHICKEN SALAD MADE WITH ROASTED CHICKEN, SERVED ON OUR AWARD-WINNING CRANBERRY WALNUT SOURDOUGH BREAD"
+      },
+      {
+        "name": "Turkey Club",
+        "price": 16.0,
+        "description": "ROASTED TURKEY, APPLEWOOD SMOKED BACON, LETTUCE, TOMATO, AND MAYO ON OUR FRESHLY BAKED SOURDOUGH BREAD."
+      },
+      {
+        "name": "Turkey and Swiss Sourdough (Grab and Go)",
+        "price": 11.75,
+        "description": ""
+      },
+      {
+        "name": "Turkey and Swiss Sourdough Sandwich",
+        "price": 12.95,
+        "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
+      }
+    ],
+    "GOURMET PASTRY": [
+      {
+        "name": "$10 Bag Too Good",
+        "price": 10.0,
+        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
+      },
+      {
+        "name": "Almond Maple Croissant",
+        "price": 6.95,
+        "description": "Chef's Favorite"
+      },
+      {
+        "name": "Apple Cinnamon Pull Apart",
+        "price": 5.95,
+        "description": "YOUR PERFECT EVERY DAY PASTRY"
+      },
+      {
+        "name": "Apple Danish",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Bacon Cheddar Scone",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Banana Bread Slice",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Brioche Ice Cream Sandwich",
+        "price": 8.95,
+        "description": ""
+      },
+      {
+        "name": "Bunny French Macaron",
+        "price": 4.25,
+        "description": "Hand made bunny macaron"
+      },
+      {
+        "name": "Butter Croissant",
+        "price": 5.95,
+        "description": "WORLD CLASS"
+      },
+      {
+        "name": "Cake Pop",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Cannoli",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "Caramel Apple Cider Croissant",
+        "price": 8.75,
+        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
+      },
+      {
+        "name": "Cheese Danish",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Cake (Slice)",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Croissant",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Cupcake",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "Chocolate French Cruller",
+        "price": 3.75,
+        "description": ""
+      },
+      {
+        "name": "Cinnamon Bun",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Coffee Cake Slice",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Croissant Garlic Twist",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "Crookie Croissant",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "Crumbtop Blueberry Muffin",
+        "price": 4.99,
+        "description": ""
+      },
+      {
+        "name": "Cr\u00e8me Br\u00fbl\u00e9e Croissant",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Everything Round Croissant",
+        "price": 6.75,
+        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
+      },
+      {
+        "name": "Lemon Cake Slice",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Pain Suisse",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "Peach Cobbler",
+        "price": 5.75,
+        "description": ""
+      },
+      {
+        "name": "Pistachio Cream Croissant",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "Pumpkin Pie Slice",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "Pumpkin Spice Morning Bun",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Raspberry Cream Croissant",
+        "price": 9.25,
+        "description": ""
+      },
+      {
+        "name": "Round Croissant 3 Pack",
+        "price": 19.95,
+        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
+      },
+      {
+        "name": "Sausage Egg & Cheese Brioche Bun",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "St. Joseph's Pastry",
+        "price": 7.25,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Cream Croissant",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Vanilla Cupcake",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "Vanilla French Cruller",
+        "price": 3.75,
         "description": ""
       }
     ]
