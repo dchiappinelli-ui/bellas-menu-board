@@ -140,6 +140,20 @@ def main():
     objects_by_id, category_name_by_id = fetch_all_catalog_objects(token)
     menu = build_menu(objects_by_id, category_name_by_id)
 
+    # Diagnostics so a bad sync can be understood from the Actions log.
+    types = {}
+    for obj in objects_by_id.values():
+        types[obj.get("type")] = types.get(obj.get("type"), 0) + 1
+    print(f"Square returned objects by type: {types}")
+    print(f"Category names seen: {sorted(n for n in category_name_by_id.values() if n)}")
+    print(f"Categories we look for: {sorted(CATEGORY_CONFIG.keys())}")
+
+    # Never overwrite the last good menu with an empty one — an empty sync
+    # blanked every price on the TVs. Fail loudly instead so it shows red.
+    if sum(len(items) for items in menu.values()) == 0:
+        print("ERROR: sync produced zero menu items; keeping the previous data/menu.json.", file=sys.stderr)
+        sys.exit(1)
+
     output = {
         "synced_at": datetime.now(timezone.utc).isoformat(),
         "menu": menu,

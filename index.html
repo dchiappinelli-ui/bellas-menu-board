@@ -344,6 +344,8 @@ async function loadLiveMenu(){
     ]);
     if (!menuRes.ok) throw new Error('bad response');
     const data = await menuRes.json();
+    // An empty sync must never blank the board — keep what's on screen.
+    if (!Object.values(data.menu || {}).some(items => items.length)) throw new Error('menu.json has no items');
     renderAll(filterMenu(data.menu, hidden));
     lastSyncedAt = new Date(data.synced_at);
     updateSyncLabel();
