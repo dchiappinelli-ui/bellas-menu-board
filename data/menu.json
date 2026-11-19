@@ -1,198 +1,6 @@
 {
-  "synced_at": "2026-11-18T11:30:06.360171+00:00",
+  "synced_at": "2026-11-19T11:29:05.232260+00:00",
   "menu": {
-    "GOURMET PASTRY": [
-      {
-        "name": "$10 Bag Too Good",
-        "price": 10.0,
-        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
-      },
-      {
-        "name": "Almond Maple Croissant",
-        "price": 6.95,
-        "description": "Chef's Favorite"
-      },
-      {
-        "name": "Apple Cinnamon Pull Apart",
-        "price": 5.95,
-        "description": "YOUR PERFECT EVERY DAY PASTRY"
-      },
-      {
-        "name": "Apple Danish",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "Apple Pie Slice",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "Bacon Cheddar Scone",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "Banana Bread Slice",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "Brioche Ice Cream Sandwich",
-        "price": 8.95,
-        "description": ""
-      },
-      {
-        "name": "Bunny French Macaron",
-        "price": 4.25,
-        "description": "Hand made bunny macaron"
-      },
-      {
-        "name": "Butter Croissant",
-        "price": 5.95,
-        "description": "WORLD CLASS"
-      },
-      {
-        "name": "Cake Pop",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "Cannoli",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "Caramel Apple Cider Croissant",
-        "price": 8.75,
-        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
-      },
-      {
-        "name": "Cheese Danish",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "Chocolate Cake (Slice)",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "Chocolate Croissant",
-        "price": 6.99,
-        "description": ""
-      },
-      {
-        "name": "Chocolate Cupcake",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "Chocolate French Cruller",
-        "price": 3.75,
-        "description": ""
-      },
-      {
-        "name": "Cinnamon Bun",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Coffee Cake Slice",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "Croissant Garlic Twist",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "Crookie Croissant",
-        "price": 8.99,
-        "description": ""
-      },
-      {
-        "name": "Crumbtop Blueberry Muffin",
-        "price": 4.99,
-        "description": ""
-      },
-      {
-        "name": "Cr\u00e8me Br\u00fbl\u00e9e Croissant",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "Everything Round Croissant",
-        "price": 6.75,
-        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
-      },
-      {
-        "name": "Lemon Cake Slice",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "Pain Suisse",
-        "price": 8.75,
-        "description": ""
-      },
-      {
-        "name": "Peach Cobbler",
-        "price": 5.75,
-        "description": ""
-      },
-      {
-        "name": "Pistachio Cream Croissant",
-        "price": 9.75,
-        "description": ""
-      },
-      {
-        "name": "Pumpkin Pie Slice",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "Pumpkin Spice Morning Bun",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Raspberry Cream Croissant",
-        "price": 9.25,
-        "description": ""
-      },
-      {
-        "name": "Round Croissant 3 Pack",
-        "price": 19.95,
-        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
-      },
-      {
-        "name": "Sausage Egg & Cheese Brioche Bun",
-        "price": 10.95,
-        "description": ""
-      },
-      {
-        "name": "St. Joseph's Pastry",
-        "price": 7.25,
-        "description": ""
-      },
-      {
-        "name": "Strawberry Cream Croissant",
-        "price": 9.95,
-        "description": ""
-      },
-      {
-        "name": "Vanilla Cupcake",
-        "price": 4.95,
-        "description": ""
-      },
-      {
-        "name": "Vanilla French Cruller",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
     "ARTISAN SANDWICHES": [
       {
         "name": "Avocado Toast",
@@ -394,6 +202,198 @@
       {
         "name": "Sourdough Pretzel",
         "price": 6.75,
+        "description": ""
+      }
+    ],
+    "GOURMET PASTRY": [
+      {
+        "name": "$10 Bag Too Good",
+        "price": 10.0,
+        "description": "TOO GOOD TO GO BAG OF CROISSANTS"
+      },
+      {
+        "name": "Almond Maple Croissant",
+        "price": 6.95,
+        "description": "Chef's Favorite"
+      },
+      {
+        "name": "Apple Cinnamon Pull Apart",
+        "price": 5.95,
+        "description": "YOUR PERFECT EVERY DAY PASTRY"
+      },
+      {
+        "name": "Apple Danish",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Apple Pie Slice",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "Bacon Cheddar Scone",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Banana Bread Slice",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Brioche Ice Cream Sandwich",
+        "price": 8.95,
+        "description": ""
+      },
+      {
+        "name": "Bunny French Macaron",
+        "price": 4.25,
+        "description": "Hand made bunny macaron"
+      },
+      {
+        "name": "Butter Croissant",
+        "price": 5.95,
+        "description": "WORLD CLASS"
+      },
+      {
+        "name": "Cake Pop",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Cannoli",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "Caramel Apple Cider Croissant",
+        "price": 8.75,
+        "description": "A FLAKY, CARAMEL APPLE AND DRIZZLED WITH A CIDER-INFUSED GLAZE FOR A SEASONAL TREAT."
+      },
+      {
+        "name": "Cheese Danish",
+        "price": 6.85,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Cake (Slice)",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Croissant",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "Chocolate Cupcake",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "Chocolate French Cruller",
+        "price": 3.75,
+        "description": ""
+      },
+      {
+        "name": "Cinnamon Bun",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Coffee Cake Slice",
+        "price": 4.85,
+        "description": ""
+      },
+      {
+        "name": "Croissant Garlic Twist",
+        "price": 3.85,
+        "description": ""
+      },
+      {
+        "name": "Crookie Croissant",
+        "price": 8.99,
+        "description": ""
+      },
+      {
+        "name": "Crumbtop Blueberry Muffin",
+        "price": 4.99,
+        "description": ""
+      },
+      {
+        "name": "Cr\u00e8me Br\u00fbl\u00e9e Croissant",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Everything Round Croissant",
+        "price": 6.75,
+        "description": "GREAT FOR SANDWICHES OR BURGERS....OR ON ITS OWN OF COURSE."
+      },
+      {
+        "name": "Lemon Cake Slice",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Pain Suisse",
+        "price": 8.75,
+        "description": ""
+      },
+      {
+        "name": "Peach Cobbler",
+        "price": 5.75,
+        "description": ""
+      },
+      {
+        "name": "Pistachio Cream Croissant",
+        "price": 9.75,
+        "description": ""
+      },
+      {
+        "name": "Pumpkin Pie Slice",
+        "price": 5.95,
+        "description": ""
+      },
+      {
+        "name": "Pumpkin Spice Morning Bun",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Raspberry Cream Croissant",
+        "price": 9.25,
+        "description": ""
+      },
+      {
+        "name": "Round Croissant 3 Pack",
+        "price": 19.95,
+        "description": "Famous Round Croissant as Seen on TV with David & Martha Stewart"
+      },
+      {
+        "name": "Sausage Egg & Cheese Brioche Bun",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "St. Joseph's Pastry",
+        "price": 7.25,
+        "description": ""
+      },
+      {
+        "name": "Strawberry Cream Croissant",
+        "price": 9.95,
+        "description": ""
+      },
+      {
+        "name": "Vanilla Cupcake",
+        "price": 4.95,
+        "description": ""
+      },
+      {
+        "name": "Vanilla French Cruller",
+        "price": 3.75,
         "description": ""
       }
     ],
