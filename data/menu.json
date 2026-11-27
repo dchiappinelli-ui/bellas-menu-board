@@ -1,6 +1,118 @@
 {
-  "synced_at": "2026-11-26T12:16:01.853421+00:00",
+  "synced_at": "2026-11-27T12:01:42.885356+00:00",
   "menu": {
+    "BREAD": [
+      {
+        "name": "Anthony Loaf",
+        "price": 11.0,
+        "description": ""
+      },
+      {
+        "name": "Bagel Fresh 4 Pack",
+        "price": 10.95,
+        "description": ""
+      },
+      {
+        "name": "Brioche Hamburger Buns",
+        "price": 7.95,
+        "description": ""
+      },
+      {
+        "name": "Brioche Hot Dog Bun",
+        "price": 11.95,
+        "description": ""
+      },
+      {
+        "name": "Brioche Loaf",
+        "price": 16.95,
+        "description": ""
+      },
+      {
+        "name": "Ciabatta Rolls",
+        "price": 2.0,
+        "description": ""
+      },
+      {
+        "name": "Cinnamon Raisin Babka",
+        "price": 7.95,
+        "description": ""
+      },
+      {
+        "name": "Classic Sourdough Bread",
+        "price": 11.95,
+        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
+      },
+      {
+        "name": "Cranberry Walnut Sourdough",
+        "price": 14.0,
+        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
+      },
+      {
+        "name": "Croissant Loaf",
+        "price": 22.0,
+        "description": ""
+      },
+      {
+        "name": "Everything Sourdough",
+        "price": 12.99,
+        "description": ""
+      },
+      {
+        "name": "Everything Sourdough Bagel",
+        "price": 2.95,
+        "description": ""
+      },
+      {
+        "name": "Focaccia Square",
+        "price": 6.0,
+        "description": ""
+      },
+      {
+        "name": "French Baguette",
+        "price": 6.95,
+        "description": ""
+      },
+      {
+        "name": "Half Cinnamon Raisin Babka",
+        "price": 14.0,
+        "description": ""
+      },
+      {
+        "name": "Half Croissant Loaf",
+        "price": 11.99,
+        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
+      },
+      {
+        "name": "Irish Soda Bread",
+        "price": 11.99,
+        "description": ""
+      },
+      {
+        "name": "Italian Farfale",
+        "price": 4.75,
+        "description": ""
+      },
+      {
+        "name": "Olive Sourdough",
+        "price": 12.95,
+        "description": ""
+      },
+      {
+        "name": "Prosciutto Baguette",
+        "price": 6.99,
+        "description": ""
+      },
+      {
+        "name": "Sourdough Bagel",
+        "price": 2.95,
+        "description": ""
+      },
+      {
+        "name": "Sourdough Pretzel",
+        "price": 6.75,
+        "description": ""
+      }
+    ],
     "SPECIALTY DRINKS": [
       {
         "name": "Blended Nitro Coffee",
@@ -135,115 +247,65 @@
         "description": "The Turkey and Swiss Sourdough Sandwich features a savory combination of premium turkey and melted Swiss cheese, pressed to perfection on crispy sourdough bread. Enjoy this deliciously hot and satisfying meal option anytime."
       }
     ],
-    "BREAD": [
+    "COFFEE": [
       {
-        "name": "Anthony Loaf",
-        "price": 11.0,
+        "name": "Americano",
+        "price": 4.5,
         "description": ""
       },
       {
-        "name": "Bagel Fresh 4 Pack",
-        "price": 10.95,
+        "name": "Cappuccino",
+        "price": 6.25,
         "description": ""
       },
       {
-        "name": "Brioche Hamburger Buns",
-        "price": 7.95,
+        "name": "Ceremonial Matcha Latte",
+        "price": 7.65,
         "description": ""
       },
       {
-        "name": "Brioche Hot Dog Bun",
-        "price": 11.95,
+        "name": "Chai Tea Latte",
+        "price": 6.85,
         "description": ""
       },
       {
-        "name": "Brioche Loaf",
-        "price": 16.95,
+        "name": "Cortado",
+        "price": 5.95,
         "description": ""
       },
       {
-        "name": "Ciabatta Rolls",
-        "price": 2.0,
+        "name": "Drip Coffee",
+        "price": 4.25,
         "description": ""
       },
       {
-        "name": "Cinnamon Raisin Babka",
-        "price": 7.95,
+        "name": "Espresso",
+        "price": 3.85,
         "description": ""
       },
       {
-        "name": "Classic Sourdough Bread",
-        "price": 11.95,
-        "description": "This classic sourdough bread features a crispy, golden crust and a tangy, rich flavor, crafted through traditional artisanal baking methods. Perfect for sandwiches or as a side to your favorite meals."
-      },
-      {
-        "name": "Cranberry Walnut Sourdough",
-        "price": 14.0,
-        "description": "This Cranberry Walnut Sourdough features a tangy-sweet flavor with a nutty profile, complemented by a crispy, golden crust. Perfect for artisanal bread lovers seeking a hearty and flavorful loaf."
-      },
-      {
-        "name": "Croissant Loaf",
-        "price": 22.0,
-        "description": ""
-      },
-      {
-        "name": "Everything Sourdough",
-        "price": 12.99,
-        "description": ""
-      },
-      {
-        "name": "Everything Sourdough Bagel",
-        "price": 2.95,
-        "description": ""
-      },
-      {
-        "name": "Focaccia Square",
-        "price": 6.0,
-        "description": ""
-      },
-      {
-        "name": "French Baguette",
-        "price": 6.95,
-        "description": ""
-      },
-      {
-        "name": "Half Cinnamon Raisin Babka",
-        "price": 14.0,
-        "description": ""
-      },
-      {
-        "name": "Half Croissant Loaf",
-        "price": 11.99,
-        "description": "The Half Croissant Loaf offers a flaky texture and buttery flavor, perfect for both sweet and savory recipes. Enjoy its versatility in sandwiches, French toast, or as a standalone treat."
-      },
-      {
-        "name": "Irish Soda Bread",
-        "price": 11.99,
-        "description": ""
-      },
-      {
-        "name": "Italian Farfale",
+        "name": "Hot Chocolate",
         "price": 4.75,
         "description": ""
       },
       {
-        "name": "Olive Sourdough",
-        "price": 12.95,
+        "name": "Iced Coffee",
+        "price": 4.85,
         "description": ""
       },
       {
-        "name": "Prosciutto Baguette",
-        "price": 6.99,
+        "name": "Latte",
+        "price": 6.5,
         "description": ""
       },
       {
-        "name": "Sourdough Bagel",
-        "price": 2.95,
+        "name": "Macchiato",
+        "price": 4.65,
         "description": ""
       },
       {
-        "name": "Sourdough Pretzel",
-        "price": 6.75,
+        "name": "Tea",
+        "price": 3.75,
         "description": ""
       }
     ],
@@ -435,68 +497,6 @@
       },
       {
         "name": "Vanilla French Cruller",
-        "price": 3.75,
-        "description": ""
-      }
-    ],
-    "COFFEE": [
-      {
-        "name": "Americano",
-        "price": 4.5,
-        "description": ""
-      },
-      {
-        "name": "Cappuccino",
-        "price": 6.25,
-        "description": ""
-      },
-      {
-        "name": "Ceremonial Matcha Latte",
-        "price": 7.65,
-        "description": ""
-      },
-      {
-        "name": "Chai Tea Latte",
-        "price": 6.85,
-        "description": ""
-      },
-      {
-        "name": "Cortado",
-        "price": 5.95,
-        "description": ""
-      },
-      {
-        "name": "Drip Coffee",
-        "price": 4.25,
-        "description": ""
-      },
-      {
-        "name": "Espresso",
-        "price": 3.85,
-        "description": ""
-      },
-      {
-        "name": "Hot Chocolate",
-        "price": 4.75,
-        "description": ""
-      },
-      {
-        "name": "Iced Coffee",
-        "price": 4.85,
-        "description": ""
-      },
-      {
-        "name": "Latte",
-        "price": 6.5,
-        "description": ""
-      },
-      {
-        "name": "Macchiato",
-        "price": 4.65,
-        "description": ""
-      },
-      {
-        "name": "Tea",
         "price": 3.75,
         "description": ""
       }
